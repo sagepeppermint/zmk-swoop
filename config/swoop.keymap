@@ -4,90 +4,105 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // Layer definitions
-#define BASE 0
-#define SYM 1
-#define EXT 2
-#define FNC 3
-#define SYM2 4
-#define ACCENT 5
+#define DWARF 0
+#define NAV 1
+#define MEDIA 2
+#define NUM 3
+#define SYM 4
+#define FN 5
 #define SETTINGS 6
-// -----------------
-
-&sk {
-	// don't release mods on other mods presses
-	ignore-modifiers;
-};
 
 
 / {
 	behaviors {
-		// Enables holding the first mod-tap key
-		// by performing a tap-release-hold sequence.
-		// To use it: "&qt KEYCODE1 KEYCODE2"
-		qt: quick_tap {
-			compatible = "zmk,behavior-hold-tap";
-			label = "QUICK_TAP";
-			#binding-cells = <2>;
-			flavor = "hold-preferred";
-			tapping-term-ms = <200>;
-			quick-tap-ms = <200>;
-			bindings = <&kp>, <&kp>;
-		};
+
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
 	};
 
-	macros {
-		// sometimes my device thinks a modifier is being held down
-		// pressing all modifiers fixes it.
-		unstick: unstick {
-			label = "ZM_unstick";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
-		};
-	};
-
-	combos {
-		compatible = "zmk,combos";
-		// both right thumb keys
-		combo_accent {
-			timeout-ms = <200>;
-			key-positions = <32 33>;
-			bindings = <&mo ACCENT>;
-		};
-		// internal-left & external-right thumb keys
-		combo_sym2 {
-			timeout-ms = <200>;
-			key-positions = <31 33>;
-			bindings = <&mo SYM2>;
-		};
-		// both left thumb keys
-		combo_settings {
-			timeout-ms = <200>;
-			key-positions = <30 31>;
-			bindings = <&mo SETTINGS>;
-		};
-		// left index & middle fingers (home-row)
-		// hold control & space for Adobe workflow
-		combo_ctrl_space {
-			timeout-ms = <200>;
-			key-positions = <12 13>;
-			bindings = <&kp LC(SPACE)>;
-			layers = <BASE>;
-		};
-	};
-
+	
 	keymap {
 		compatible = "zmk,keymap";
-		// Base alpha layer
+		
 		default_layer {
 			label = "Base";
 			bindings = <
-			&kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P 
-			&kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp A
-			&kp Z &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp B
-						&kp A &kp B &kp C 			&kp D &kp E &kp F
+			&kp F &kp L &kp H &kp D &kp V           &kp Z &kp G  &kp O		&kp U   	&kp DOT 
+			&kp S &kp R &kp N &kp T &kp M           &kp P &kp Y  &kp E		&kp I 		&kp A
+			&hm LGUI X &hm LALT J &hm LSHIFT B &hm LCTRL K &kp Q           &kp C &hm RCTRL W  &hm RSHIFT SQT 	&hm RALT COMMA 	&hm RGUI SEMICOLON
+						&lt MEDIA ESC &lt NAV SPACE &kp TAB 			&lt SYM ENTER &lt NUM BACKSPACE  &lt FN DELETE
 			>;
 		};
 
+		navigation_layer {
+			label = "Navigation";
+			bindings = <
+			&none &none &none &none &none					&none &kp LC(V) &kp LC(C) &kp LC(X) &kp LC(Z)
+			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL &none		&kp CAPSLOCK &kp LEFT &kp DOWN &kp UP &kp RIGHT
+			&none &none &none &none &none				&none &kp HOME &kp PG_DN &kp PG_UP &kp END
+			&trans &trans &trans						&kp ENTER &kp BACKSPACE  &kp DELETE
+			>;
+		};
+
+		media_layer {
+			label = "Media";
+			bindings = <
+			&none &none &none &none &none			&none &none &kp C_BRI_DN &kp C_BRI_UP &none
+			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL &none			&bt BT_CLR &kp C_PREVIOUS &kp C_VOLUME_DOWN &kp C_VOL_UP &kp C_NEXT
+			&none &none &none &none &none			&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+			&trans &trans &trans					&kp C_STOP &kp C_PLAY_PAUSE &kp C_MUTE
+
+			>;
+		};
+
+		number_layer {
+			label = "Number";
+			bindings = <
+			&kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT			&none &none &none &none &none
+			&kp FSLH &kp N4 &kp N5 &kp N6 &kp BSLH			&none &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
+			&kp GRAVE &kp N1 &kp N2 &kp N3 &kp EQUAL			&none &none &none &none &none
+			&kp DOT &kp N0 &kp MINUS					&trans &trans &trans
+
+			>;
+		};
+
+		symbol_layer {
+			label = "Symbol";
+			bindings = <
+			&kp LBRC &kp AMPERSAND &kp STAR &kp LPAR &kp RBRC			&none &none &none &none &none
+			&kp QUESTION &kp DOLLAR &kp PERCENT &kp CARET &kp PIPE			&none &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
+			&kp TILDE &kp EXCL &kp AT &kp HASH &kp PLUS			&none &none &none &none &none
+			&kp LPAR &kp RPAR &kp UNDERSCORE					&trans &trans &trans
+
+			>;
+		};
+
+		function_layer {
+			label = "Function";
+			bindings = <
+			&kp F1 &kp F2 &kp F3 &kp F4 &kp PRINTSCREEN			&none &none &none &none &none
+			&kp F5 &kp F6 &kp F7 &kp F8 &kp SCROLLLOCK			&none &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
+			&kp F9 &kp F10 &kp F11 &kp F12 &kp PAUSE_BREAK			&none &none &none &none &none
+			&kp K_APP &kp SPACE &kp TAB					&trans &trans &trans
+
+			>;
+		};
+
+
+/*			
+			&none &none &none &none &none			&none &none &none &none &none
+			&none &none &none &none &none			&none &none &none &none &none
+			&none &none &none &none &none			&none &none &none &none &none
+			&trans &trans &trans					&trans &trans &trans
+*/
+
 	};
 };
+
