@@ -5,9 +5,9 @@
 
 // Layer definitions
 #define DWARF 0
-#define LEFT 1
-#define RIGHT 2
-#define NUM 3
+#define LAYLEFT 1
+#define LAYRIGHT 2
+#define LAYNUM 3
 #define SYM 4
 #define FN 5
 #define SETTINGS 6
@@ -28,10 +28,10 @@
 		default_layer {
 			label = "Base";
 			bindings = <
-			&kp F &kp L &kp H &kp D &kp V           &kp Z &kp G  &kp O		&kp U   	&kp DOT 
-			&kp S &kp R &kp N &kp T &kp M           &kp P &kp Y  &kp E		&kp I 		&kp A
-			&kp X &kp J &kp B &kp K &kp Q           &kp C &kp W  &kp  SQT 	&kp  COMMA 	&kp  SEMICOLON
-			&lt NUM ESC &kp ENTER &lt LEFT TAB		&lt RIGHT BACKSPACE &kp SPACE &kp DELETE
+			&kp F &kp L &kp H &kp D &kp V           		&kp Z &kp G  &kp O		&kp U   	&kp DOT 
+			&kp S &kp R &kp N &kp T &kp M           		&kp P &kp Y  &kp E		&kp I 		&kp A
+			&kp X &kp J &kp B &kp K &kp Q           		&kp C &kp W  &kp  SQT 	&kp  COMMA 	&kp  SEMICOLON
+			&lt LAYNUM ESC &kp ENTER &lt LAYLEFT TAB		&lt LAYRIGHT BACKSPACE &kp SPACE &kp DELETE
 			>;
 		};
 
