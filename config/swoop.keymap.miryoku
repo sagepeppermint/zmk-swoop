@@ -5,8 +5,8 @@
 
 // Layer definitions
 #define DWARF 0
-#define LEFT 1
-#define RIGHT 2
+#define NAV 1
+#define MEDIA 2
 #define NUM 3
 #define SYM 4
 #define FN 5
@@ -16,6 +16,15 @@
 / {
 	behaviors {
 
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
 	};
 
 	
@@ -27,30 +36,8 @@
 			bindings = <
 			&kp F &kp L &kp H &kp D &kp V           &kp Z &kp G  &kp O		&kp U   	&kp DOT 
 			&kp S &kp R &kp N &kp T &kp M           &kp P &kp Y  &kp E		&kp I 		&kp A
-			&kp X &kp J &kp B &kp K &kp Q           &kp C &kp W  &kp  SQT 	&kp  COMMA 	&kp  SEMICOLON
-			&kp ESC &kp ENTER &lt LEFT TAB			&lt RIGHT BACKSPACE &kp SPACE &kp DELETE
-			>;
-		};
-
-		left_layer {
-			label = "Left";
-			bindings = <
-			&none &none &none &none &none							&none &kp HOME &kp PG_DN &kp PG_UP &kp END
-			&sk LGUI &sk LALT &sk LSHIFT &sk LCTRL &none			&none &kp LEFT &kp DOWN &kp UP &kp RIGHT
-			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &none			&none &none &none &none &none
-			&trans &trans &trans									&trans &trans &trans
-			>;
-		};
-
-
-		right_layer {
-			label = "Right";
-			bindings = <
-			&kp LT &kp LBRC &kp LBKT &kp LPAR &kp TILDE					&kp CARET &kp RPAR &kp RBKT &kp RBRC &kp GT
-			&kp MINUS &kp STAR &kp EQUAL &kp UNDERSCORE &kp DOLLAR		&none &sk RCTRL &sk RSHIFT &sk RALT &sk RGUI
-			&kp PLUS &kp PIPE &kp AT &kp FSLH &kp PERCENT				&kp GRAVE &kp BSLH &kp AMPERSAND &kp QUESTION &kp EXCLAMATION
-			&trans &trans &trans										&none &trans &trans
-
+			&hm LGUI X &hm LALT J &hm LSHIFT B &hm LCTRL K &kp Q           &kp C &hm RCTRL W  &hm RSHIFT SQT 	&hm RALT COMMA 	&hm RGUI SEMICOLON
+						&lt MEDIA ESC &lt NAV SPACE &kp TAB 			&lt SYM ENTER &lt NUM BACKSPACE  &lt FN DELETE
 			>;
 		};
 
