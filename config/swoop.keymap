@@ -12,6 +12,9 @@
 #define FN 5
 #define SETTINGS 6
 
+&sk {
+    quick-release;
+ };
 
 / {
 	behaviors {
@@ -28,39 +31,37 @@
 			&kp F &kp L &kp H &kp D &kp V           &kp Z &kp G  &kp O		&kp U   	&kp DOT 
 			&kp S &kp R &kp N &kp T &kp M           &kp P &kp Y  &kp E		&kp I 		&kp A
 			&kp X &kp J &kp B &kp K &kp Q           &kp C &kp W  &kp  SQT 	&kp  COMMA 	&kp  SEMICOLON
-			&kp ESC &kp ENTER &lt LEFT TAB			&lt RIGHT BACKSPACE &kp SPACE &kp DELETE
+			&lt NUM ESC &kp ENTER &lt LEFT TAB		&lt RIGHT BACKSPACE &kp SPACE &kp DELETE
 			>;
 		};
 
 		left_layer {
 			label = "Left";
 			bindings = <
-			&none &none &none &none &none							&none &kp HOME &kp PG_DN &kp PG_UP &kp END
-			&sk LGUI &sk LALT &sk LSHIFT &sk LCTRL &none			&none &kp LEFT &kp DOWN &kp UP &kp RIGHT
-			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &none			&none &none &none &none &none
-			&trans &trans &trans									&trans &trans &trans
+			&kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &none		&none &kp HOME &kp PG_DN &kp PG_UP &kp END
+			&sk LGUI &sk LALT &sk LSHIFT &sk LCTRL &caps_word				&kp CAPSLOCK &kp LEFT &kp DOWN &kp UP &kp RIGHT
+			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &none					&none &kp ENTER &none &none &none
+			&trans &trans &trans											&kp BACKSPACE &kp SPACE &kp DELETE
 			>;
 		};
-
 
 		right_layer {
 			label = "Right";
 			bindings = <
 			&kp LT &kp LBRC &kp LBKT &kp LPAR &kp TILDE					&kp CARET &kp RPAR &kp RBKT &kp RBRC &kp GT
-			&kp MINUS &kp STAR &kp EQUAL &kp UNDERSCORE &kp DOLLAR		&none &sk RCTRL &sk RSHIFT &sk RALT &sk RGUI
+			&kp MINUS &kp STAR &kp EQUAL &kp UNDERSCORE &kp DOLLAR		&kp HASH &sk RCTRL &sk RSHIFT &sk RALT &sk RGUI
 			&kp PLUS &kp PIPE &kp AT &kp FSLH &kp PERCENT				&kp GRAVE &kp BSLH &kp AMPERSAND &kp QUESTION &kp EXCLAMATION
-			&trans &trans &trans										&none &trans &trans
-
+			&kp ESC &kp ENTER &kp TAB									&trans &trans &trans
 			>;
 		};
 
-		navigation_layer {
-			label = "Navigation";
+		number_layer {
+			label = "Number";
 			bindings = <
-			&none &none &none &none &none					&none &kp LC(V) &kp LC(C) &kp LC(X) &kp LC(Z)
-			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL &none		&kp CAPSLOCK &kp LEFT &kp DOWN &kp UP &kp RIGHT
-			&none &none &none &none &none				&none &kp HOME &kp PG_DN &kp PG_UP &kp END
-			&trans &trans &trans						&kp ENTER &kp BACKSPACE  &kp DELETE
+			&kp F1 &kp F2 &kp F3 &kp F4 &none			&none &kp N7 &kp N8 &kp N9 &none
+			&kp F5 &kp F6 &kp F7 &kp F8 &none			&kp DOT &kp N4 &kp N5 &kp N6 &kp MINUS
+			&kp F9 &kp F10 &kp F11 &kp F12 &none		&kp FSLH &kp N1 &kp N2 &kp N3 &kp BSLH
+			&trans &trans &trans						&kp BACKSPACE &kp N0 &trans
 			>;
 		};
 
@@ -86,16 +87,6 @@
 			>;
 		};
 
-		symbol_layer {
-			label = "Symbol";
-			bindings = <
-			&kp LBRC &kp AMPERSAND &kp STAR &kp LPAR &kp RBRC			&none &none &none &none &none
-			&kp QUESTION &kp DOLLAR &kp PERCENT &kp CARET &kp PIPE			&none &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
-			&kp TILDE &kp EXCL &kp AT &kp HASH &kp PLUS			&none &none &none &none &none
-			&kp LPAR &kp RPAR &kp UNDERSCORE					&trans &trans &trans
-
-			>;
-		};
 
 		function_layer {
 			label = "Function";
