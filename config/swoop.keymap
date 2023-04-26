@@ -4,13 +4,13 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // Layer definitions
-#define DWARF 0
-#define LEFT 1
-#define RIGHT 2
-#define NUM 3
-#define SYM 4
-#define FN 5
-#define SETTINGS 6
+#define LYDWARF 0
+#define LYLEFT 1
+#define LYRIGHT 2
+#define LYNUM 3
+#define LYROW 4
+#define LYFN 5
+#define LYSETTINGS 6
 
 &sk {
     quick-release;
@@ -28,10 +28,10 @@
 		default_layer {
 			label = "Base";
 			bindings = <
-			&kp F &kp L &kp H &kp D &kp V           &kp Z &kp G  &kp O		&kp U   	&kp DOT 
-			&kp S &kp R &kp N &kp T &kp M           &kp P &kp Y  &kp E		&kp I 		&kp A
-			&kp X &kp J &kp B &kp K &kp Q           &kp C &kp W  &kp  SQT 	&kp  COMMA 	&kp  SEMICOLON
-			&lt NUM ESC &kp ENTER &lt LEFT TAB		&lt RIGHT BACKSPACE &kp SPACE &kp DELETE
+			&kp F &kp L &kp H &kp D &kp V           	&kp Z &kp G  &kp O		&kp U   	&kp DOT 
+			&kp S &kp R &kp N &kp T &kp M           	&kp P &kp Y  &kp E		&kp I 		&kp A
+			&kp X &kp J &kp B &kp K &kp Q           	&kp C &kp W  &kp  SQT 	&kp  COMMA 	&kp  SEMICOLON
+			&kp ESC &lt LYNUM ENTER &lt LYLEFT TAB		&lt LYRIGHT BACKSPACE &lt LYROW SPACE &kp DELETE
 			>;
 		};
 
@@ -40,7 +40,7 @@
 			bindings = <
 			&kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &none		&none &kp HOME &kp PG_DN &kp PG_UP &kp END
 			&sk LGUI &sk LALT &sk LSHIFT &sk LCTRL &caps_word				&kp CAPSLOCK &kp LEFT &kp DOWN &kp UP &kp RIGHT
-			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &none					&none &kp ENTER &none &none &none
+			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &none					&none &kp BACKSPACE &kp SPACE &kp DELETE &kp ENTER 
 			&trans &trans &trans											&kp BACKSPACE &kp SPACE &kp DELETE
 			>;
 		};
@@ -61,17 +61,17 @@
 			&kp F1 &kp F2 &kp F3 &kp F4 &none			&none &kp N7 &kp N8 &kp N9 &none
 			&kp F5 &kp F6 &kp F7 &kp F8 &none			&kp DOT &kp N4 &kp N5 &kp N6 &kp MINUS
 			&kp F9 &kp F10 &kp F11 &kp F12 &none		&kp FSLH &kp N1 &kp N2 &kp N3 &kp BSLH
-			&trans &trans &trans						&kp BACKSPACE &kp N0 &trans
+			&trans &trans &trans						&kp BACKSPACE &kp N0 &kp DELETE
 			>;
 		};
 
-		media_layer {
+		numrow_layer {
 			label = "Media";
 			bindings = <
-			&none &none &none &none &none			&none &none &kp C_BRI_DN &kp C_BRI_UP &none
-			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL &none			&bt BT_CLR &kp C_PREVIOUS &kp C_VOLUME_DOWN &kp C_VOL_UP &kp C_NEXT
-			&none &none &none &none &none			&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-			&trans &trans &trans					&kp C_STOP &kp C_PLAY_PAUSE &kp C_MUTE
+			&kp EXCLAMATION &kp AT &kp HASH &kp DOLLAR &kp PERCENT		&kp CARET &kp AMPERSAND &kp STAR &kp LPAR &kp RPAR
+			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5							&kp N6 &kp N7 &kp N8 &kp N9 &kp N0
+			&bt BT_CLR &bt BT_PRV &bt BT_NXT &bt OUT_TOG &none			&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+			&kp ESC &kp ENTER &kp TAB									&trans &trans &trans
 
 			>;
 		};
