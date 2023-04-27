@@ -49,10 +49,10 @@
 		default_layer {
 			label = "Base";
 			bindings = <
-			&kp F &kp L &kp H &kp D &kp V           	&kp Z &kp G  &kp O		&kp U   	&kp DOT 
-			&kp S &kp R &kp N &kp T &kp M           	&kp P &kp Y  &kp E		&kp I 		&kp A
-			&kp X &kp J &kp B &kp K &kp Q           	&kp C &kp W  &kp  SQT 	&kp  COMMA 	&kp  SEMICOLON
-			&kp ESC &lt LYNUM ENTER &lt LYLEFT TAB		&lt LYRIGHT BACKSPACE &lt LYROW SPACE &kp DELETE
+			&kp F &kp L &kp H &kp D &kp V           		&kp Z &kp G  &kp O		&kp U   	&kp DOT 
+			&kp S &kp R &kp N &kp T &kp M           		&kp P &kp Y  &kp E		&kp I 		&kp A
+			&kp X &kp J &kp B &kp K &kp Q           		&kp C &kp W  &kp  SQT 	&kp  COMMA 	&kp  SEMICOLON
+			&kp ESC &glt LYLEFT ENTER &glt LYNUM TAB		&glt LYROW BACKSPACE &glt LYRIGHT SPACE &kp DELETE
 			>;
 		};
 
