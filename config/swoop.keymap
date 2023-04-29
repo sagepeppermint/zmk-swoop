@@ -52,7 +52,7 @@
 			&kp F &kp L &kp H &kp D &kp V           		&kp Z &kp G  &kp O		&kp U   	&kp DOT 
 			&kp S &kp R &kp N &kp T &kp M           		&kp P &kp Y  &kp E		&kp I 		&kp A
 			&kp X &kp J &kp B &kp K &kp Q           		&kp C &kp W  &kp  SQT 	&kp  COMMA 	&kp  SEMICOLON
-			&mo LYNUM &kp ENTER &sl LYLEFT					&sl LYRIGHT  &kp SPACE &kp BACKSPACE
+			&mo LYNUM &glt LYNUM ENTER &sl LYLEFT					&sl LYRIGHT  &kp SPACE &kp BACKSPACE
 			>;
 		};
 
