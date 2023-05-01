@@ -84,7 +84,7 @@
 			bindings = <
 			XXX XXX XXX XXX XXX								XXX &kp LC(V) &kp LC(C) &kp LC(X) &kp LC(Z)
 			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX		&caps_word &kp LEFT &kp DOWN &kp UP &kp RIGHT
-			XXX XXX XXX XXX XXX								&kp CAPSLOCK &kp HOME &kp PG_DN &kp PG_UP &kp END
+			XXX XXX &to LYNUM XXX XXX								&kp CAPSLOCK &kp HOME &kp PG_DN &kp PG_UP &kp END
 			___ ___ ___										&kp ENTER &kp BACKSPACE  &kp DELETE
 			>;
 		};
@@ -105,7 +105,7 @@
 			bindings = <
 			&kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT			XXX XXX XXX XXX XXX
 			&kp FSLH &kp N4 &kp N5 &kp N6 &kp BSLH			XXX &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
-			&kp GRAVE &kp N1 &kp N2 &kp N3 &kp EQUAL		XXX XXX XXX XXX XXX
+			&kp GRAVE &kp N1 &kp N2 &kp N3 &kp EQUAL		XXX XXX &to LYNAV XXX XXX
 			&kp DOT &kp N0 &kp MINUS						___ ___ ___
 
 			>;
@@ -144,7 +144,6 @@
 			>;
 		};
 
-
 /*			
 			XXX XXX XXX XXX XXX			XXX XXX XXX XXX XXX
 			XXX XXX XXX XXX XXX			XXX XXX XXX XXX XXX
@@ -154,4 +153,3 @@
 
 	};
 };
-
