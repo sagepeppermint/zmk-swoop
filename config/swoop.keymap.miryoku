@@ -11,8 +11,7 @@
 #define LYNUM 3
 #define LYSYM 4
 #define LYFN 5
-#define LYSETTINGS 6
-#define LYMOUSE 7
+#define LYMOUSE 6
 
 // Key sides
 #define KEYS_LEFT 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 
