@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include "mouse.dtsi"
 
 // Layer definitions
 #define LYDWARF 0
@@ -75,27 +76,27 @@
 			&kp F &kp L &kp H &kp D &kp V           						&kp Z &kp G  &kp O &kp U &kp DOT 
 			&hml LGUI S &hml LALT R &hml LSHIFT N &hml LCTRL T &kp M        &kp P &hmr RCTRL Y &hmr RSHIFT E &hmr RALT I &hmr RGUI A
 			&kp X &kp J &kp B &kp K &kp Q           						&kp C &kp W &kp SQT &kp COMMA &kp SEMICOLON
-			&tlt LYMEDIA ESC &tlt LYNAV SPACE &tlt LYMOUSE TAB 						&tlt LYSYM ENTER &tlt LYNUM BACKSPACE &tlt LYFN DELETE
+			&tlt LYMEDIA ESC &tlt LYNAV SPACE &tlt LYMOUSE TAB 				&tlt LYSYM ENTER &tlt LYNUM BACKSPACE &tlt LYFN DELETE
 			>;
 		};
 
 		navigation_layer {
 			label = "Navigation";
 			bindings = <
-			XXX XXX XXX XXX XXX					XXX &kp LC(V) &kp LC(C) &kp LC(X) &kp LC(Z)
-			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX		&kp CAPSLOCK &kp LEFT &kp DOWN &kp UP &kp RIGHT
-			XXX XXX XXX XXX XXX				XXX &kp HOME &kp PG_DN &kp PG_UP &kp END
-			___ ___ ___						&kp ENTER &kp BACKSPACE  &kp DELETE
+			XXX XXX XXX XXX XXX								XXX &kp LC(V) &kp LC(C) &kp LC(X) &kp LC(Z)
+			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX		&caps_word &kp LEFT &kp DOWN &kp UP &kp RIGHT
+			XXX XXX XXX XXX XXX								&kp CAPSLOCK &kp HOME &kp PG_DN &kp PG_UP &kp END
+			___ ___ ___										&kp ENTER &kp BACKSPACE  &kp DELETE
 			>;
 		};
 
 		media_layer {
 			label = "Media";
 			bindings = <
-			XXX XXX XXX XXX XXX			XXX XXX &kp C_BRI_DN &kp C_BRI_UP XXX
+			XXX XXX XXX XXX XXX									XXX XXX &kp C_BRI_DN &kp C_BRI_UP XXX
 			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX			&bt BT_CLR &kp C_PREVIOUS &kp C_VOLUME_DOWN &kp C_VOL_UP &kp C_NEXT
-			XXX XXX XXX XXX XXX			&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-			___ ___ ___					&kp C_STOP &kp C_PLAY_PAUSE &kp C_MUTE
+			XXX XXX XXX XXX XXX									&out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
+			___ ___ ___											&kp C_STOP &kp C_PLAY_PAUSE &kp C_MUTE
 
 			>;
 		};
@@ -105,8 +106,8 @@
 			bindings = <
 			&kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT			XXX XXX XXX XXX XXX
 			&kp FSLH &kp N4 &kp N5 &kp N6 &kp BSLH			XXX &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
-			&kp GRAVE &kp N1 &kp N2 &kp N3 &kp EQUAL			XXX XXX XXX XXX XXX
-			&kp DOT &kp N0 &kp MINUS					___ ___ ___
+			&kp GRAVE &kp N1 &kp N2 &kp N3 &kp EQUAL		XXX XXX XXX XXX XXX
+			&kp DOT &kp N0 &kp MINUS						___ ___ ___
 
 			>;
 		};
@@ -115,9 +116,9 @@
 			label = "Symbol";
 			bindings = <
 			&kp LBRC &kp AMPERSAND &kp STAR &kp LPAR &kp RBRC			XXX XXX XXX XXX XXX
-			&kp QUESTION &kp DOLLAR &kp PERCENT &kp CARET &kp PIPE			XXX &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
-			&kp TILDE &kp EXCL &kp AT &kp HASH &kp PLUS			XXX XXX XXX XXX XXX
-			&kp LPAR &kp RPAR &kp UNDERSCORE					___ ___ ___
+			&kp QUESTION &kp DOLLAR &kp PERCENT &kp CARET &kp PIPE		XXX &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
+			&kp TILDE &kp EXCL &kp AT &kp HASH &kp PLUS					XXX XXX XXX XXX XXX
+			&kp LPAR &kp RPAR &kp UNDERSCORE							___ ___ ___
 
 			>;
 		};
@@ -127,8 +128,8 @@
 			bindings = <
 			&kp F1 &kp F2 &kp F3 &kp F4 &kp PRINTSCREEN			XXX XXX XXX XXX XXX
 			&kp F5 &kp F6 &kp F7 &kp F8 &kp SCROLLLOCK			XXX &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
-			&kp F9 &kp F10 &kp F11 &kp F12 &kp PAUSE_BREAK			XXX XXX XXX XXX XXX
-			&kp K_APP &kp SPACE &kp TAB					___ ___ ___
+			&kp F9 &kp F10 &kp F11 &kp F12 &kp PAUSE_BREAK		XXX XXX XXX XXX XXX
+			&kp K_APP &kp SPACE &kp TAB							___ ___ ___
 
 			>;
 		};
