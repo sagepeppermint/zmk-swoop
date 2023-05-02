@@ -98,10 +98,10 @@
 		navigation_layer {
 			label = "Navigation";
 			bindings = <
-			XXX XXX &to LYNUM &to LYDWARF XXX				XXX &ctrltab &kp LS(TAB) &alttab XXX
+			XXX XXX &to LYNUM &to LYDWARF XXX				XXX &kp LC(V) &kp LC(C) &kp LC(X) &kp LC(Z)
 			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX		&caps_word &kp LEFT &kp DOWN &kp UP &kp RIGHT
 			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) XXX		&kp CAPSLOCK &kp HOME &kp PG_DN &kp PG_UP &kp END
-			___ ___ ___										&kp ENTER &kp BACKSPACE  &kp DELETE
+			___ ___ ___										&kp ENTER &kp BACKSPACE &kp DELETE
 			>;
 		};
 
@@ -109,8 +109,8 @@
 			label = "Media";
 			bindings = <
 			XXX XXX &to LYFN &to LYDWARF XXX					XXX XXX &kp C_BRI_DN &kp C_BRI_UP XXX
-			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX			&bt BT_CLR &kp C_PREVIOUS &kp C_VOLUME_DOWN &kp C_VOL_UP &kp C_NEXT
-			XXX XXX XXX XXX XXX									&out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
+			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX			&out OUT_TOG &kp C_PREVIOUS &kp C_VOLUME_DOWN &kp C_VOL_UP &kp C_NEXT
+			XXX XXX XXX XXX XXX									&bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
 			___ ___ ___											&kp C_STOP &kp C_PLAY_PAUSE &kp C_MUTE
 
 			>;
@@ -152,7 +152,7 @@
 		mouse_layer {
 			label = "Mouse";
 			bindings = <
-			XXX XXX &to LYSYM &to LYDWARF XXX					XXX &kp LC(V) &kp LC(C) &kp LC(X) &kp LC(Z)
+			XXX XXX &to LYSYM &to LYDWARF XXX					XXX &ctrltab &kp LS(TAB) &alttab XXX
 			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX			XXX U_MS_L U_MS_D U_MS_U U_MS_R
 			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) XXX			XXX U_WH_L U_WH_D U_WH_U U_WH_R
 			___ ___ ___											U_BTN2 U_BTN1 U_BTN3
