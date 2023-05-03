@@ -13,6 +13,7 @@
 #define LYFN 5
 #define LYMOUSE 6
 #define LYREPORT 7
+#define LYNUMR 7
 
 // Key sides
 #define KEYS_LEFT 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 
@@ -80,6 +81,15 @@
 			ignored-key-positions = <7>;
 		};
 		
+		num_word: number-word {
+			compatible = "zmk,behavior-caps-word";
+			label = "NUMBER_WORD";
+			#binding-cells = <0>;
+			layers = <LYNUMR>;
+			continue-list = <BACKSPACE DELETE DOT COMMA FSLH BSLH>;
+			ignore-numbers;
+		};
+
 	};
 
 	combos {
@@ -92,6 +102,15 @@
 			layers = <LYDWARF LYREPORT>;
 			bindings = <&tog LYREPORT>;
 		};
+
+		combo_num_word {
+			timeout-ms = <50>;
+			global-quick-tap-ms = <150>;
+			key-positions = <6 7>;
+			layers = <LYDWARF LYNUMR>;
+			bindings = <&num_word>;
+		};
+		
 	};
 	
 	keymap {
@@ -110,7 +129,7 @@
 		navigation_layer {
 			label = "Navigation";
 			bindings = <
-			XXX XXX &to LYNUM &to LYDWARF XXX				XXX &kp LC(V) &kp LC(C) &kp LC(X) &kp LC(Z)
+			XXX XXX &to LYNUM &to LYDWARF XXX				&num_word &kp LC(V) &kp LC(C) &kp LC(X) &kp LC(Z)
 			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX		&caps_word &kp LEFT &kp DOWN &kp UP &kp RIGHT
 			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) XXX		&kp CAPSLOCK &kp HOME &kp PG_DN &kp PG_UP &kp END
 			___ ___ ___										&kp ENTER &kp BACKSPACE &kp DELETE
@@ -173,12 +192,23 @@
 		};
 
 		reporting_layer {
-			label = " Reporting";
+			label = "Reporting";
 			bindings = <
 			&kp F &kp L &kp H &kp D &kp ESC				XXX XXX XXX XXX XXX
 			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5			XXX XXX XXX XXX XXX
 			&kp N6 &kp N7 &kp N8 &kp N9 &kp N0			XXX XXX XXX XXX XXX
 			___ ___ ___									___ ___ ___
+
+			>;
+		};
+
+		number_right_layer {
+			label = "Number right";
+			bindings = <
+			XXX XXX XXX XXX XXX			&kp FSLH &kp N7 &kp N8 &kp N9 &kp BSLH
+			XXX XXX XXX XXX XXX			&kp COMMA &kp N4 &kp N5 &kp N6 &kp DOT
+			XXX XXX XXX XXX XXX			&num_word &kp N1 &kp N2 &kp N3 &kp ENTER
+			&kp ESC &kp SPACE &kp TAB	&kp BACKSPACE &kp N0 &kp DELETE
 
 			>;
 		};
