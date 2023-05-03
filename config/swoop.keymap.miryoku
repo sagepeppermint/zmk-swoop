@@ -13,7 +13,7 @@
 #define LYFN 5
 #define LYMOUSE 6
 #define LYREPORT 7
-#define LYNUMR 7
+#define LYNUMR 8
 
 // Key sides
 #define KEYS_LEFT 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 
