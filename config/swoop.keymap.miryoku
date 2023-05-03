@@ -81,7 +81,7 @@
 			ignored-key-positions = <7>;
 		};
 		
-		num_word: number-word {
+		numword: number-word {
 			compatible = "zmk,behavior-caps-word";
 			label = "NUMBER_WORD";
 			#binding-cells = <0>;
@@ -103,12 +103,12 @@
 			bindings = <&tog LYREPORT>;
 		};
 
-		combo_num_word {
+		combo_numword {
 			timeout-ms = <50>;
 			global-quick-tap-ms = <150>;
 			key-positions = <6 7>;
 			layers = <LYDWARF LYNUMR>;
-			bindings = <&num_word>;
+			bindings = <&numword>;
 		};
 		
 	};
@@ -129,7 +129,7 @@
 		navigation_layer {
 			label = "Navigation";
 			bindings = <
-			XXX XXX &to LYNUM &to LYDWARF XXX				&num_word &kp LC(V) &kp LC(C) &kp LC(X) &kp LC(Z)
+			XXX XXX &to LYNUM &to LYDWARF XXX				&numword &kp LC(V) &kp LC(C) &kp LC(X) &kp LC(Z)
 			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX		&caps_word &kp LEFT &kp DOWN &kp UP &kp RIGHT
 			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) XXX		&kp CAPSLOCK &kp HOME &kp PG_DN &kp PG_UP &kp END
 			___ ___ ___										&kp ENTER &kp BACKSPACE &kp DELETE
@@ -207,7 +207,7 @@
 			bindings = <
 			XXX XXX XXX XXX XXX			&kp FSLH &kp N7 &kp N8 &kp N9 &kp BSLH
 			XXX XXX XXX XXX XXX			&kp COMMA &kp N4 &kp N5 &kp N6 &kp DOT
-			XXX XXX XXX XXX XXX			&num_word &kp N1 &kp N2 &kp N3 &kp ENTER
+			XXX XXX XXX XXX XXX			&numword &kp N1 &kp N2 &kp N3 &kp ENTER
 			&kp ESC &kp SPACE &kp TAB	&kp BACKSPACE &kp N0 &kp DELETE
 
 			>;
