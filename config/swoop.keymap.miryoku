@@ -115,7 +115,7 @@
 	
 	macros {
 
-		dictation-macro: dictation_macro {
+		dictation_macro: dictation_macro {
 			label = "DICTATION_MACRO";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -212,7 +212,7 @@
 			&kp F &kp L &kp H &kp D &kp ESC				XXX XXX XXX XXX XXX
 			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5			XXX XXX XXX XXX XXX
 			&kp N6 &kp N7 &kp N8 &kp N9 &kp N0			XXX XXX XXX XXX XXX
-			&tog LYREPORT &dictation-macro &kp TAB		&kp ENTER &kp BACKSPACE &kp DELETE
+			&tog LYREPORT &dictation_macro &kp TAB		&kp ENTER &kp BACKSPACE &kp DELETE
 
 			>;
 		};
