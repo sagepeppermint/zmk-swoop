@@ -115,7 +115,7 @@
 	
 	macros {
 
-		dictation-macro: dictation-macro {
+		dictation-macro: dictation_macro {
 			label = "DICTATION_MACRO";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -125,7 +125,7 @@
 				, <&macro_release &kp LCTRL>
 				;
 		};
-		
+
 	};
 	
 	keymap {
