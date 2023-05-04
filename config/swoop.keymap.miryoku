@@ -95,7 +95,7 @@
 	combos {
 		compatible = "zmk,combos";
 		
-		combo_reporting {
+		combo-reporting {
 			timeout-ms = <50>;
 			global-quick-tap-ms = <150>;
 			key-positions = <2 3>;
@@ -103,12 +103,27 @@
 			bindings = <&tog LYREPORT>;
 		};
 
-		combo_numword {
+		combo-numword {
 			timeout-ms = <50>;
 			global-quick-tap-ms = <150>;
 			key-positions = <6 7>;
 			layers = <LYDWARF LYNUMR>;
 			bindings = <&numword>;
+		};
+		
+	};
+	
+	macros {
+
+		dictation-macro: dictation-macro {
+			label = "DICTATION_MACRO";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+				= <&macro_press &kp LCTRL>
+				, <&macro_tap &kp TILDE>
+				, <&macro_release &kp LCTRL>
+				;
 		};
 		
 	};
@@ -197,7 +212,7 @@
 			&kp F &kp L &kp H &kp D &kp ESC				XXX XXX XXX XXX XXX
 			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5			XXX XXX XXX XXX XXX
 			&kp N6 &kp N7 &kp N8 &kp N9 &kp N0			XXX XXX XXX XXX XXX
-			___ ___ ___									___ ___ ___
+			&tog LYREPORT &dictation-macro &kp TAB		&kp ENTER &kp BACKSPACE &kp DELETE
 
 			>;
 		};
