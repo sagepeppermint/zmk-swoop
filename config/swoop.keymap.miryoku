@@ -100,7 +100,7 @@
 			timeout-ms = <50>;
 			global-quick-tap-ms = <150>;
 			key-positions = <2 3>;
-			layers = <LYDWARF LYREPORT>;
+			layers = <LYDWARF LYQWERTY LYREPORT>;
 			bindings = <&tog LYREPORT>;
 		};
 
@@ -108,7 +108,7 @@
 			timeout-ms = <50>;
 			global-quick-tap-ms = <150>;
 			key-positions = <6 7>;
-			layers = <LYDWARF LYNUMR>;
+			layers = <LYDWARF LYQWERTY LYNUMR>;
 			bindings = <&numword>;
 		};
 		
@@ -197,7 +197,7 @@
 		navigation_layer {
 			label = "Navigation";
 			bindings = <
-			&kp HOME &kp PG_UP &kp PG_DN &kp END &numword			XXX &to LYDWARF &to LYQWERTY XXX XXX
+			&kp HOME &kp PG_UP &kp PG_DN &kp END &numword			XXX &to LYDWARF &to LYQWERTY &to LYREPORT XXX
 			&kp LEFT &kp UP &kp DOWN &kp RIGHT &caps_word 			XXX &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
 			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) XXX				XXX &to LYNUM &lock_lynav XXX XXX
 			&kp DELETE &kp BACKSPACE &kp ENTER						___ ___ ___
@@ -207,7 +207,7 @@
 		media_layer {
 			label = "Media";
 			bindings = <
-			XXX &kp C_BRI_UP &kp C_BRI_DN XXX XXX										XXX &to LYDWARF &to LYQWERTY XXX XXX
+			XXX &kp C_BRI_UP &kp C_BRI_DN XXX XXX										XXX &to LYDWARF &to LYQWERTY &to LYREPORT XXX
 			&kp C_PREVIOUS &kp C_VOL_UP &kp C_VOLUME_DOWN &kp C_NEXT &out OUT_TOG		XXX &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
 			&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3	&bt BT_CLR				XXX &to LYFN &lock_lymedia XXX XXX
 			&kp C_STOP &kp C_PLAY_PAUSE &kp C_MUTE										___ ___ ___
@@ -217,7 +217,7 @@
 		number_layer {
 			label = "Number";
 			bindings = <
-			XXX XXX &to LYQWERTY &to LYDWARF XXX			&kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT
+			XXX &to LYREPORT &to LYQWERTY &to LYDWARF XXX	&kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT
 			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX		&kp FSLH &kp N4 &kp N5 &kp N6 &kp BSLH
 			XXX XXX &lock_lynum &to LYNAV XXX				&kp GRAVE &kp N1 &kp N2 &kp N3 &kp EQUAL
 			___ ___ ___										&kp MINUS &kp N0 &kp DOT
@@ -227,7 +227,7 @@
 		symbol_layer {
 			label = "Symbol";
 			bindings = <
-			XXX XXX &to LYQWERTY &to LYDWARF XXX			&kp LBRC &kp AMPERSAND &kp STAR &kp LPAR &kp RBRC
+			XXX &to LYREPORT &to LYQWERTY &to LYDWARF XXX	&kp LBRC &kp AMPERSAND &kp STAR &kp LPAR &kp RBRC
 			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX		&kp QUESTION &kp DOLLAR &kp PERCENT &kp CARET &kp PIPE
 			XXX XXX &lock_lysym &to LYMOUSE XXX				&kp TILDE &kp EXCL &kp AT &kp HASH &kp PLUS
 			___ ___ ___										&kp UNDERSCORE &kp RPAR &kp LPAR
@@ -237,7 +237,7 @@
 		function_layer {
 			label = "Function";
 			bindings = <
-			XXX XXX &to LYQWERTY &to LYDWARF XXX			&kp PRINTSCREEN &kp F1 &kp F2 &kp F3 &kp F4
+			XXX &to LYREPORT &to LYQWERTY &to LYDWARF XXX	&kp PRINTSCREEN &kp F1 &kp F2 &kp F3 &kp F4
 			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX		&kp SCROLLLOCK &kp F5 &kp F6 &kp F7 &kp F8
 			XXX XXX &lock_lyfn &to LYMEDIA XXX				&kp PAUSE_BREAK &kp F9 &kp F10 &kp F11 &kp F12
 			___ ___ ___										&kp TAB &kp SPACE &kp K_APP 
@@ -247,7 +247,7 @@
 		mouse_layer {
 			label = "Mouse";
 			bindings = <
-			XXX &ctrltab &kp LS(TAB) &alttab XXX	XXX &to LYDWARF &to LYQWERTY XXX XXX
+			XXX &ctrltab &kp LS(TAB) &alttab XXX	XXX &to LYDWARF &to LYQWERTY &to LYREPORT XXX
 			U_MS_L U_MS_U U_MS_D U_MS_R XXX			XXX &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
 			U_WH_L U_WH_U U_WH_D U_WH_R XXX			XXX &to LYSYM &lock_lymouse XXX XXX
 			U_BTN3 U_BTN1 U_BTN2					___ ___ ___
@@ -257,10 +257,10 @@
 		reporting_layer {
 			label = "Reporting";
 			bindings = <
-			&kp F &kp L &kp H &kp D &kp ESC				___ ___ ___ ___ ___
-			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5			___ ___ ___ ___ ___
-			&kp N6 &kp N7 &kp N8 &kp N9 &kp N0			___ ___ ___ ___ ___
-			&kp DELETE &dictation_macro &tog LYREPORT 	___ ___ ___
+			&kp F &kp L &kp H &kp D &kp ESC				&kp FSLH &kp N7 &kp N8 &kp N9 &kp BSLH
+			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5			&kp COMMA &kp N4 &kp N5 &kp N6 &kp DOT
+			&kp N6 &kp N7 &kp N8 &kp N9 &kp N0			XXX &kp N1 &kp N2 &kp N3 &kp ENTER
+			&kp DELETE &dictation_macro &tog LYREPORT 	&kp BACKSPACE &kp N0 &kp DELETE
 			>;
 		};
 
