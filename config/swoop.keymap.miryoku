@@ -199,7 +199,7 @@
 			bindings = <
 			&kp HOME &kp PG_UP &kp PG_DN &kp END &numword			XXX &to LYDWARF &to LYQWERTY &to LYREPORT XXX
 			&kp LEFT &kp UP &kp DOWN &kp RIGHT &caps_word 			XXX &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
-			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) XXX				XXX &to LYNUM &lock_lynav XXX XXX
+			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp CAPS		XXX &to LYNUM &lock_lynav XXX XXX
 			&kp DELETE &kp BACKSPACE &kp ENTER						___ ___ ___
 			>;
 		};
