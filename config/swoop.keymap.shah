@@ -62,69 +62,8 @@
 			global-quick-tap-ms = <150>;
 			bindings = <&mo>, <&kp>;
 		};
-
-		// capsword: 	edit-caps-word {
-		// 	compatible = "zmk,behavior-caps-word";
-		// 	label = "CAPS_WORD";
-		// 	#binding-cells = <0>;
-        //                 mods = <MOD_LSFT>;
-		// 	continue-list = <UNDERSCORE BACKSPACE DELETE FSLH>;
-        //                 ignore-alphas;
-        //                 ignore-numbers;
-        //                 ignore-modifiers;
-		// };
-
-		// numword: edit-number-word {
-		// 	compatible = "zmk,behavior-caps-word";
-		// 	label = "NUMBER_WORD";
-		// 	#binding-cells = <0>;
-		// 	layers = <LYNUM>;
-		// 	continue-list = <BACKSPACE DELETE DOT COMMA FSLH BSLH>;
-		// 	ignore-numbers;
-		// };
-
-		alttab: swapper-alt-tab {
-			compatible = "zmk,behavior-tri-state";
-			label = "SWAPPER_ALT_TAB";
-			#binding-cells = <0>;
-			bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-			ignored-key-positions = <22>;
-		};
-
-		ctrltab: swapper-ctrl-tab {
-			compatible = "zmk,behavior-tri-state";
-			label = "SWAPPER_CTRL_TAB";
-			#binding-cells = <0>;
-			bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
-			ignored-key-positions = <22>;
-		};
-
-		// guitab: swapper-gui-tab {
-		// 	compatible = "zmk,behavior-tri-state";
-		// 	label = "SWAPPER_GUI_TAB";
-		// 	#binding-cells = <0>;
-		// 	bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-		// 	ignored-key-positions = <22>;
-		// };
 		
 	};
-
-	// macros {
-
-	// 	dictation_macro: dictationmacro {
-	// 		label = "DICTATION_MACRO";
-	// 		compatible = "zmk,behavior-macro";
-	// 		#binding-cells = <0>;
-	// 		wait-ms = <200>;
-	// 		tap-ms = <200>;
-	// 		bindings
-	// 			= <&macro_press &kp LCTRL>
-	// 			, <&macro_tap &kp GRAVE>
-	// 			, <&macro_release &kp LCTRL>
-	// 			;
-	// 	};
-
-	// };
 	
 	keymap {
 		compatible = "zmk,keymap";
@@ -174,7 +113,7 @@
 			bindings = <
 			C_MUTE C_VOL_DN C_VOL_UP C_PLAY_PAUSE XXX										&kp FSLH &kp N7 &kp N8 &kp N9 &kp BSLH
 			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX										&kp COMMA &kp N4 &kp N5 &kp N6 &kp DOT
-			___ &alttab &kp LS(TAB) &ctrltab XXX											XXX &kp N1 &kp N2 &kp N3 &kp ENTER
+			XXX XXX XXX XXX XXX											XXX &kp N1 &kp N2 &kp N3 &kp ENTER
 			___ ___ ___																		&kp BACKSPACE &kp N0 &kp DELETE
 			>;
 		};
