@@ -13,7 +13,6 @@
 #define LYFN 5
 #define LYREPORT 6
 
-
 // Key sides
 #define KEYS_LEFT 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 
 #define KEYS_RIGHT 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29
@@ -89,7 +88,7 @@
 			ignored-key-positions = <2>;
 		};
 		
-		numword: number-word {
+		numberword: number-word {
 			compatible = "zmk,behavior-caps-word";
 			label = "NUMBER_WORD";
 			#binding-cells = <0>;
@@ -98,7 +97,7 @@
 			ignore-numbers;
 		};
 
-		capsword: capital-word {
+		capitalword: capital-word {
 			compatible = "zmk,behavior-caps-word";
 			label = "CAPITAL_WORD";
 			#binding-cells = <0>;
@@ -126,7 +125,7 @@
 			global-quick-tap-ms = <150>;
 			key-positions = <6 7>;
 			layers = <LYDWARF LYQWERTY LYNUM>;
-			bindings = <&numword>;
+			bindings = <&numberword>;
 		};
 		
 	};
@@ -205,8 +204,8 @@
 			label = "Function";
 			bindings = <
 			XXX XXX XXX XXX XXX																&kp PRINTSCREEN &kp F1 &kp F2 &kp F3 &kp F4
-			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL &out OUT_TOG								&kp SCROLLLOCK &kp F5 &kp F6 &kp F7 &kp F8
-			&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3	&bt BT_CLR					&kp PAUSE_BREAK &kp F9 &kp F10 &kp F11 &kp F12
+			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX							&kp SCROLLLOCK &kp F5 &kp F6 &kp F7 &kp F8
+			XXX XXX XXX XXX XXX					&kp PAUSE_BREAK &kp F9 &kp F10 &kp F11 &kp F12
 			___ ___ ___																		&kp TAB &kp SPACE &kp K_APP  
 			>;
 		};
@@ -220,14 +219,5 @@
 			&kp DELETE &dictation_macro &tog LYREPORT 							___ ___ ___
 			>;
 		};
-
-
-/*			
-			XXX XXX XXX XXX XXX			XXX XXX XXX XXX XXX
-			XXX XXX XXX XXX XXX			XXX XXX XXX XXX XXX
-			XXX XXX XXX XXX XXX			XXX XXX XXX XXX XXX
-			___ ___ ___					___ ___ ___
-*/
-
 	};
 };
