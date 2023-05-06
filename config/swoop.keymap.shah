@@ -109,7 +109,7 @@
 		
 	};
 
-	macros {
+/* 	macros {
 
 		dictation_macro: dictationmacro {
 			label = "DICTATION_MACRO";
@@ -124,7 +124,7 @@
 				;
 		};
 
-	};
+	}; */
 	
 	keymap {
 		compatible = "zmk,keymap";
