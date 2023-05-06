@@ -100,11 +100,11 @@
 			compatible = "zmk,behavior-caps-word";
 			label = "CAPITAL_WORD";
 			#binding-cells = <0>;
-                        mods = <MOD_LSFT>;
+						mods = <MOD_LSFT>;
 			continue-list = <UNDERSCORE BACKSPACE DELETE FSLH>;
-                        ignore-alphas;
-                        ignore-numbers;
-                        ignore-modifiers;
+						ignore-alphas;
+						ignore-numbers;
+						ignore-modifiers;
 		};
 	};
 
@@ -162,10 +162,10 @@
 		qwerty_layer {
 			label = "QWERTY";
 			bindings = <
-			&kp Q &kp W &kp E &kp R &kp T           						&kp Y &kp U  &kp I &kp O &kp P 
-			&hml LGUI A &hml LALT S &hml LSHIFT D &hml LCTRL F &kp G        &kp H &hmr RCTRL J &hmr RSHIFT K &hmr RALT L &hmr RGUI SEMICOLON
-			&kp Z &kp X &kp C &kp V &kp B           						&kp N &kp M &kp COMMA &kp DOT &kp SQT
-			&tlt LYFN DELETE &tlt LYNUM BACKSPACE &tlt LYREPORT ENTER 		&tlt LYSYM TAB &tlt LYNAV SPACE &kp ESC 			
+			&kp Q &kp W &kp E &kp R &kp T									&kp Y &kp U  &kp I &kp O &kp P 
+			&hml LGUI A &hml LALT S &hml LSHIFT D &hml LCTRL F &kp G		&kp H &hmr RCTRL J &hmr RSHIFT K &hmr RALT L &hmr RGUI SEMICOLON
+			&kp Z &kp X &kp C &kp V &kp B									&kp N &kp M &kp COMMA &kp DOT &kp SQT
+			&tlt LYFN DELETE &tlt LYNUM BACKSPACE &tlt LYREPORT ENTER		&tlt LYSYM TAB &tlt LYNAV SPACE &kp ESC 			
 			>;
 		};
 
@@ -212,10 +212,10 @@
 		reporting_layer {
 			label = "Reporting";
 			bindings = <
-			&kp F &kp L &kp H &kp D &kp ESC			___ ___ ___ ___ ___
-			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		___ ___ ___ ___ ___
-			&kp N6 &kp N7 &kp N8 &kp N9 &kp N0		___ ___ ___ ___ ___
-			&kp DELETE &dictation_macro &tog LYREPORT 							___ ___ ___
+			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5						___ ___ ___ ___ ___
+			&kp ESC &kp TAB &kp DELETE &dictation_macro ___			___ ___ ___ ___ ___
+			&kp N6 &kp N7 &kp N8 &kp N9 &kp N0						___ ___ ___ ___ ___
+			___ ___ ___ 											___ ___ ___
 			>;
 		};
 	};
