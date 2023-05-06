@@ -99,13 +99,13 @@
 			ignored-key-positions = <22>;
 		};
 
-		guitab: swapper-gui-tab {
-			compatible = "zmk,behavior-tri-state";
-			label = "SWAPPER_GUI_TAB";
-			#binding-cells = <0>;
-			bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-			ignored-key-positions = <22>;
-		};
+		// guitab: swapper-gui-tab {
+		// 	compatible = "zmk,behavior-tri-state";
+		// 	label = "SWAPPER_GUI_TAB";
+		// 	#binding-cells = <0>;
+		// 	bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+		// 	ignored-key-positions = <22>;
+		// };
 		
 	};
 
