@@ -81,7 +81,7 @@
 
 		guitab: swapper-gui-tab {
 			compatible = "zmk,behavior-tri-state";
-			label = "SWAPPER_CTRL_TAB";
+			label = "SWAPPER_GUI_TAB";
 			#binding-cells = <0>;
 			bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
 			ignored-key-positions = <22>;
@@ -101,7 +101,7 @@
 			label = "CAPITAL_WORD";
 			#binding-cells = <0>;
                         mods = <MOD_LSFT>;
-			continue-list = <UNDERSCORE BACKSPACE DELETE>;
+			continue-list = <UNDERSCORE BACKSPACE DELETE FSLH>;
                         ignore-alphas;
                         ignore-numbers;
                         ignore-modifiers;
@@ -172,40 +172,40 @@
 		navigation_layer {
 			label = "Navigation";
 			bindings = <
-			&kp HOME &kp PG_UP &kp PG_DN &kp END XXX		XXX XXX XXX XXX XXX
-			&kp LEFT &kp UP &kp DOWN &kp RIGHT XXX 			&kp CAPS &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
-			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) XXX		XXX XXX XXX XXX XXX
-			&kp DELETE &kp BACKSPACE &kp ENTER						___ ___ ___
+			&kp HOME &kp PG_UP &kp PG_DN &kp END XXX						XXX XXX XXX XXX XXX
+			&kp LEFT &kp UP &kp DOWN &kp RIGHT XXX							&kp CAPS &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
+			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) XXX						XXX &capitalword &numberword XXX XXX
+			&kp DELETE &kp BACKSPACE &kp ENTER								___ ___ ___
 			>;
 		};
 
 		number_layer {
 			label = "Number";
 			bindings = <
-			&kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE XXX		&kp FSLH &kp N7 &kp N8 &kp N9 &kp BSLH
-			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX		&kp COMMA &kp N4 &kp N5 &kp N6 &kp DOT
-			&guitab &alttab &kp LS(TAB) &ctrltab XXX		XXX &kp N1 &kp N2 &kp N3 &kp ENTER
-			___ ___ ___										&kp BACKSPACE &kp N0 &kp DELETE
+			&kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &kp TAB	&kp FSLH &kp N7 &kp N8 &kp N9 &kp BSLH
+			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL &kp LC(UP)				&kp COMMA &kp N4 &kp N5 &kp N6 &kp DOT
+			&guitab &alttab &kp LS(TAB) &ctrltab &kp LC(DOWN)				&kp K_CANCEL &kp N1 &kp N2 &kp N3 &kp ENTER
+			&kp K_CANCEL ___ &kp K_CANCEL									&kp BACKSPACE &kp N0 &kp DELETE
 			>;
 		};
 
 		symbol_layer {
 			label = "Symbol";
 			bindings = <
-			&kp LT &kp LBRC &kp LBKT &kp LPAR &kp TILDE										&kp CARET &kp RPAR &kp RBKT &kp RBRC &kp GT
-			&kp MINUS &kp STAR &kp EQUAL &kp UNDERSCORE &kp DOLLAR							&kp HASH &sk RCTRL &sk RSHIFT &sk RALT &sk RGUI
-			&kp PLUS &kp PIPE &kp AT &kp FSLH &kp PERCENT									&kp GRAVE &kp BSLH &kp AMPERSAND &kp QUESTION &kp EXCLAMATION
-			&kp DELETE &kp BACKSPACE &kp ENTER												___ ___ ___
+			&kp LT &kp LBRC &kp LBKT &kp LPAR &kp TILDE						&kp CARET &kp RPAR &kp RBKT &kp RBRC &kp GT
+			&kp MINUS &kp STAR &kp EQUAL &kp UNDERSCORE &kp DOLLAR			&kp HASH &sk RCTRL &sk RSHIFT &sk RALT &sk RGUI
+			&kp PLUS &kp PIPE &kp AT &kp FSLH &kp PERCENT					&kp GRAVE &kp BSLH &kp AMPERSAND &kp QUESTION &kp EXCLAMATION
+			&kp DELETE &kp BACKSPACE &kp ENTER								___ ___ ___
 			>;
 		};
 
 		function_layer {
 			label = "Function";
 			bindings = <
-			XXX XXX XXX XXX XXX																&kp PRINTSCREEN &kp F1 &kp F2 &kp F3 &kp F4
-			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX							&kp SCROLLLOCK &kp F5 &kp F6 &kp F7 &kp F8
-			XXX XXX XXX XXX XXX					&kp PAUSE_BREAK &kp F9 &kp F10 &kp F11 &kp F12
-			___ ___ ___																		&kp TAB &kp SPACE &kp K_APP  
+			C_AL_CALC C_BRI_DN C_BRI_UP XXX XXX									&kp PRINTSCREEN &kp F1 &kp F2 &kp F3 &kp F4
+			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL &out OUT_TOG					&kp SCROLLLOCK &kp F5 &kp F6 &kp F7 &kp F8
+			&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3	&bt BT_CLR		&kp PAUSE_BREAK &kp F9 &kp F10 &kp F11 &kp F12
+			___ ___ ___															&kp TAB &kp SPACE &kp K_APP  
 			>;
 		};
 
