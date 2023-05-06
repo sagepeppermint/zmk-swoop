@@ -68,7 +68,7 @@
 			label = "SWAPPER_ALT_TAB";
 			#binding-cells = <0>;
 			bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-			ignored-key-positions = <2>;
+			ignored-key-positions = <22>;
 		};
 
 		ctrltab: swapper-ctrl-tab {
@@ -76,7 +76,15 @@
 			label = "SWAPPER_CTRL_TAB";
 			#binding-cells = <0>;
 			bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
-			ignored-key-positions = <2>;
+			ignored-key-positions = <22>;
+		};
+
+		guitab: swapper-gui-tab {
+			compatible = "zmk,behavior-tri-state";
+			label = "SWAPPER_CTRL_TAB";
+			#binding-cells = <0>;
+			bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+			ignored-key-positions = <22>;
 		};
 		
 		numberword: number-word {
@@ -176,7 +184,7 @@
 			bindings = <
 			C_MUTE C_VOL_DN C_VOL_UP C_PLAY_PAUSE XXX		&kp FSLH &kp N7 &kp N8 &kp N9 &kp BSLH
 			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX		&kp COMMA &kp N4 &kp N5 &kp N6 &kp DOT
-			XXX XXX XXX XXX XXX								XXX &kp N1 &kp N2 &kp N3 &kp ENTER
+			&guitab &alttab &kp LS(TAB) &ctrltab XXX		XXX &kp N1 &kp N2 &kp N3 &kp ENTER
 			___ ___ ___										&kp BACKSPACE &kp N0 &kp DELETE
 			>;
 		};
