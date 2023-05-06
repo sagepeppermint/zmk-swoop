@@ -138,48 +138,6 @@
 				;
 		};
 
-		lock_lynav: lock_lynav {
-			label = "lock_lynav";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&macro_tap &to LYDWARF &to LYNAV>;
-		};
-
-		lock_lymedia: lock_lymedia {
-			label = "lock_lymedia";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&macro_tap &to LYDWARF &to LYMEDIA>;
-		};
-
-		lock_lynum: lock_lynum {
-			label = "lock_lynum";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&macro_tap &to LYDWARF &to LYNUM>;
-		};
-
-		lock_lysym: lock_lysym {
-			label = "lock_lysym";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&macro_tap &to LYDWARF &to LYSYM>;
-		};
-
-		lock_lyfn: lock_lyfn {
-			label = "lock_lyfn";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&macro_tap &to LYDWARF &to LYFN>;
-		};
-
-		lock_lymouse: lock_lymouse {
-			label = "lock_lymouse";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&macro_tap &to LYDWARF &to LYMOUSE>;
-		};
-
 	};
 	
 	keymap {
@@ -191,7 +149,7 @@
 			&kp F &kp L &kp H &kp D &kp V           						&kp Z &kp G  &kp O &kp U &kp DOT 
 			&hml LGUI S &hml LALT R &hml LSHIFT N &hml LCTRL T &kp M        &kp P &hmr RCTRL Y &hmr RSHIFT E &hmr RALT I &hmr RGUI A
 			&kp X &kp J &kp B &kp K &kp Q           						&kp C &kp W &kp SQT &kp COMMA &kp SEMICOLON
-			&tlt LYFN DELETE &tlt LYNUM BACKSPACE &tlt LYSYM ENTER 			&tlt LYMOUSE TAB &tlt LYNAV SPACE &tlt LYMEDIA ESC 			
+			&tlt LYFN DELETE &tlt LYNUM BACKSPACE &tlt LYSYM ENTER 			&tlt LYSYM TAB &tlt LYNAV SPACE &tlt LYMEDIA ESC 			
 			>;
 		};
 
@@ -228,10 +186,10 @@
 		number_layer {
 			label = "Number";
 			bindings = <
-			XXX &to LYREPORT &to LYQWERTY &to LYDWARF XXX	&kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT
-			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX		&kp FSLH &kp N4 &kp N5 &kp N6 &kp BSLH
-			XXX XXX &lock_lynum &to LYNAV XXX				&kp GRAVE &kp N1 &kp N2 &kp N3 &kp EQUAL
-			___ ___ ___										&kp MINUS &kp N0 &kp DOT
+			C_MUTE C_VOL_DN C_VOL_UP C_PLAY_PAUSE XXX		&kp FSLH &kp N7 &kp N8 &kp N9 &kp BSLH
+			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX		&kp COMMA &kp N4 &kp N5 &kp N6 &kp DOT
+			XXX XXX XXX XXX XXX								XXX &kp N1 &kp N2 &kp N3 &kp ENTER
+			___ ___ ___										&kp BACKSPACE &kp N0 &kp DELETE
 			>;
 		};
 
