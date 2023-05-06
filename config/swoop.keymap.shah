@@ -135,7 +135,7 @@
 			&kp F &kp L &kp H &kp D &kp V													&kp Z &kp G &kp O &kp U &kp DOT 
 			&hml LGUI S &hml LALT R &hml LSHIFT N &hml LCTRL T &kp M						&kp P &hmr RCTRL Y &hmr RSHIFT E &hmr RALT I &hmr RGUI A
 			&kp X &kp J &kp B &kp K &kp Q													&kp C &kp W &kp SQT &kp COMMA &kp SEMICOLON
-			&tlt LYFN DELETE &tlt LYNUM BACKSPACE &kp ENTER						&tlt LYSYM TAB &tlt LYNAV SPACE &kp ESC
+			&tlt LYFN DELETE &tlt LYNUM BACKSPACE &kp ENTER									&tlt LYSYM TAB &tlt LYNAV SPACE &kp ESC
 			>;
 		};
 
@@ -149,7 +149,7 @@
 			>;
 		};
 
-		navigation_layer {
+		nav_layer {
 			label = "Navigation";
 			bindings = <
 			&kp HOME &kp PG_UP &kp PG_DN &kp END XXX										XXX XXX XXX XXX XXX
@@ -159,7 +159,7 @@
 			>;
 		};
 
-		symbol_layer {
+		sym_layer {
 			label = "Symbol";
 			bindings = <
 			&kp LT &kp LBRC &kp LBKT &kp LPAR &kp TILDE										&kp CARET &kp RPAR &kp RBKT &kp RBRC &kp GT
@@ -169,7 +169,7 @@
 			>;
 		};
 
-		number_layer {
+		num_layer {
 			label = "Number";
 			bindings = <
 			C_MUTE C_VOL_DN C_VOL_UP C_PLAY_PAUSE XXX										&kp FSLH &kp N7 &kp N8 &kp N9 &kp BSLH
@@ -179,7 +179,7 @@
 			>;
 		};
 
-		function_layer {
+		fun_layer {
 			label = "Function";
 			bindings = <
 			XXX XXX XXX XXX XXX																&kp PRINTSCREEN &kp F1 &kp F2 &kp F3 &kp F4
