@@ -193,7 +193,7 @@
 			label = "Reporting";
 			bindings = <
 			&kp F &kp L &kp H &kp D &kp ESC													___ ___ ___ ___ ___
-			&hms LGUI N1 &hms LALT N2 &hms LSHIFT N3 &hms LCTRL N4 &kp N5					___ ___ ___ ___ ___
+			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5												___ ___ ___ ___ ___
 			&kp N6 &kp N7 &kp N8 &kp N9 &kp N0												___ ___ ___ ___ ___
 			&kp DELETE &dictation_macro ___ 												___ ___ ___
 			>;
