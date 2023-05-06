@@ -63,25 +63,25 @@
 			bindings = <&mo>, <&kp>;
 		};
 
-		capsword: 	edit-caps-word {
-			compatible = "zmk,behavior-caps-word";
-			label = "CAPS_WORD";
-			#binding-cells = <0>;
-                        mods = <MOD_LSFT>;
-			continue-list = <UNDERSCORE BACKSPACE DELETE FSLH>;
-                        ignore-alphas;
-                        ignore-numbers;
-                        ignore-modifiers;
-		};
+		// capsword: 	edit-caps-word {
+		// 	compatible = "zmk,behavior-caps-word";
+		// 	label = "CAPS_WORD";
+		// 	#binding-cells = <0>;
+        //                 mods = <MOD_LSFT>;
+		// 	continue-list = <UNDERSCORE BACKSPACE DELETE FSLH>;
+        //                 ignore-alphas;
+        //                 ignore-numbers;
+        //                 ignore-modifiers;
+		// };
 
-		numword: edit-number-word {
-			compatible = "zmk,behavior-caps-word";
-			label = "NUMBER_WORD";
-			#binding-cells = <0>;
-			layers = <LYNUM>;
-			continue-list = <BACKSPACE DELETE DOT COMMA FSLH BSLH>;
-			ignore-numbers;
-		};
+		// numword: edit-number-word {
+		// 	compatible = "zmk,behavior-caps-word";
+		// 	label = "NUMBER_WORD";
+		// 	#binding-cells = <0>;
+		// 	layers = <LYNUM>;
+		// 	continue-list = <BACKSPACE DELETE DOT COMMA FSLH BSLH>;
+		// 	ignore-numbers;
+		// };
 
 		alttab: swapper-alt-tab {
 			compatible = "zmk,behavior-tri-state";
