@@ -111,13 +111,13 @@
 	combos {
 		compatible = "zmk,combos";
 		
-		combo-reporting {
-			timeout-ms = <50>;
-			global-quick-tap-ms = <150>;
-			key-positions = <2 3>;
-			layers = <LYDWARF LYQWERTY LYREPORT>;
-			bindings = <&tog LYREPORT>;
-		};
+		// combo-reporting {
+		// 	timeout-ms = <50>;
+		// 	global-quick-tap-ms = <150>;
+		// 	key-positions = <2 3>;
+		// 	layers = <LYDWARF LYQWERTY LYREPORT>;
+		// 	bindings = <&tog LYREPORT>;
+		// };
 
 		combo-numword {
 			timeout-ms = <50>;
@@ -202,7 +202,7 @@
 		function_layer {
 			label = "Function";
 			bindings = <
-			&kp C_AL_CALC &kp C_BRI_DN &kp C_BRI_UP XXX XXX						&kp PRINTSCREEN &kp F1 &kp F2 &kp F3 &kp F4
+			&kp C_AL_CALC &kp C_BRI_DN &kp C_BRI_UP &to LYDWARF &to LYQWERTY	&kp PRINTSCREEN &kp F1 &kp F2 &kp F3 &kp F4
 			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL &out OUT_TOG					&kp SCROLLLOCK &kp F5 &kp F6 &kp F7 &kp F8
 			&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3	&bt BT_CLR		&kp PAUSE_BREAK &kp F9 &kp F10 &kp F11 &kp F12
 			___ ___ ___															&kp TAB &kp SPACE &kp K_APP  
