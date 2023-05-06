@@ -135,7 +135,7 @@
 			&kp F &kp L &kp H &kp D &kp V													&kp Z &kp G &kp O &kp U &kp DOT 
 			&hml LGUI S &hml LALT R &hml LSHIFT N &hml LCTRL T &kp M						&kp P &hmr RCTRL Y &hmr RSHIFT E &hmr RALT I &hmr RGUI A
 			&kp X &kp J &kp B &kp K &kp Q													&kp C &kp W &kp SQT &kp COMMA &kp SEMICOLON
-			&tlt LYFN DELETE &tlt LYNUM BACKSPACE &tlt LYREPORT ENTER						&tlt LYSYM TAB &tlt LYNAV SPACE &kp ESC
+			&tlt LYFN DELETE &tlt LYNUM BACKSPACE &kp ENTER						&tlt LYSYM TAB &tlt LYNAV SPACE &kp ESC
 			>;
 		};
 
@@ -189,15 +189,15 @@
 			>;
 		};
 
-		reporting_layer {
-			label = "Reporting";
-			bindings = <
-			&kp ESC &kp TAB ___ ___ ___														___ ___ ___ ___ ___
-			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5												___ ___ ___ ___ ___
-			&kp N6 &kp N7 &kp N8 &kp N9 &kp N0												___ ___ ___ ___ ___
-			___ ___ ___ 																	&kp TAB &kp SPACE &kp ESC
-			>;
-		};
+		// reporting_layer {
+		// 	label = "Reporting";
+		// 	bindings = <
+		// 	&kp ESC &kp TAB ___ ___ ___														___ ___ ___ ___ ___
+		// 	&kp N1 &kp N2 &kp N3 &kp N4 &kp N5												___ ___ ___ ___ ___
+		// 	&kp N6 &kp N7 &kp N8 &kp N9 &kp N0												___ ___ ___ ___ ___
+		// 	___ ___ ___ 																	&kp TAB &kp SPACE &kp ESC
+		// 	>;
+		// };
 
 /*			
 			XXX XXX XXX XXX XXX			XXX XXX XXX XXX XXX
