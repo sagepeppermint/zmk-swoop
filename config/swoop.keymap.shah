@@ -111,7 +111,7 @@
 
 	macros {
 
-		dictation_macro: dictation_macro {
+		dictation_macro: dictationmacro {
 			label = "DICTATION_MACRO";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -192,7 +192,7 @@
 		reporting_layer {
 			label = "Reporting";
 			bindings = <
-			&kp ESC &kp TAB ___ &dictation_macro ___										___ ___ ___ ___ ___
+			&kp ESC &kp TAB ___ ___ ___														___ ___ ___ ___ ___
 			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5												___ ___ ___ ___ ___
 			&kp N6 &kp N7 &kp N8 &kp N9 &kp N0												___ ___ ___ ___ ___
 			___ ___ ___ 																	&kp TAB &kp SPACE &kp ESC
