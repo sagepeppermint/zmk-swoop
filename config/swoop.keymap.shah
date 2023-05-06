@@ -63,7 +63,7 @@
 			bindings = <&mo>, <&kp>;
 		};
 
-		capsword: behavior-caps-word {
+		capsword: 	edit-caps-word {
 			compatible = "zmk,behavior-caps-word";
 			label = "CAPS_WORD";
 			#binding-cells = <0>;
@@ -74,7 +74,7 @@
                         ignore-modifiers;
 		};
 
-		numword: behavior-number-word {
+		numword: edit-number-word {
 			compatible = "zmk,behavior-caps-word";
 			label = "NUMBER_WORD";
 			#binding-cells = <0>;
