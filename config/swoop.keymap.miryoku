@@ -55,6 +55,15 @@
 			hold-trigger-on-release;
 		};
 
+		hms: homerow-mod-short {
+			compatible = "zmk,behavior-hold-tap";
+			label = "HOMEROW_MOD_SHORT";
+			#binding-cells = <2>;
+			flavor = "balanced";
+			tapping-term-ms = <200>;
+			bindings = <&kp>, <&kp>;
+		};
+
 		tlt: thumb-layer-tap {
 			compatible = "zmk,behavior-hold-tap";
 			label = "THUMB_LAYER_TAP";
@@ -64,6 +73,15 @@
 			quick-tap-ms = <175>;
 			global-quick-tap-ms = <150>;
 			bindings = <&mo>, <&kp>;
+		};
+
+		reptog: report-toggle {
+			compatible = "zmk,behavior-hold-tap";
+			label = "REPORT_TOGGLE";
+			#binding-cells = <0>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <200>;
+			bindings = <&tog LYREPORT>, <&dictation_macro>;
 		};
 
 		alttab: swapper-alt-tab {
@@ -120,9 +138,11 @@
 			label = "DICTATION_MACRO";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
+			wait-ms = <200>;
+			tap-ms = <200>;
 			bindings
 				= <&macro_press &kp LCTRL>
-				, <&macro_tap &kp TILDE>
+				, <&macro_tap &kp GRAVE>
 				, <&macro_release &kp LCTRL>
 				;
 		};
@@ -257,10 +277,10 @@
 		reporting_layer {
 			label = "Reporting";
 			bindings = <
-			&kp F &kp L &kp H &kp D &kp ESC				&kp FSLH &kp N7 &kp N8 &kp N9 &kp BSLH
-			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5			&kp COMMA &kp N4 &kp N5 &kp N6 &kp DOT
-			&kp N6 &kp N7 &kp N8 &kp N9 &kp N0			XXX &kp N1 &kp N2 &kp N3 &kp ENTER
-			&kp DELETE &dictation_macro &tog LYREPORT 	&kp BACKSPACE &kp N0 &kp DELETE
+			&kp F &kp L &kp H &kp D &kp ESC										___ ___ ___ ___ ___
+			&hms LGUI N1 &hms LALT N2 &hms LSHIFT N3 &hms LCTRL N4 &kp N5		___ ___ ___ ___ ___
+			&kp N6 &kp N7 &kp N8 &kp N9 &kp N0									___ ___ ___ ___ ___
+			&kp DELETE &reptog &tog LYREPORT 							___ ___ ___
 			>;
 		};
 
