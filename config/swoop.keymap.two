@@ -179,7 +179,7 @@
 			label = "Right Symbol";
 			bindings = <
 			___ ___ ___ ___ ___												&kp LBRC &kp LPAR &kp FSLH &kp LBKT &kp LT 
-			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL ___						&kp RBRC &kp RPAR &kp BSLH &kp RBKT &kp RT
+			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL ___						&kp RBRC &kp RPAR &kp BSLH &kp RBKT &kp GT
 			___ ___ ___ ___ ___												&kp DOUBLE_QUOTES &kp DOLLAR &kp AMPERSAND &kp QUESTION &kp EXCLAMATION
 			___ ___ ___														___ ___ ___
 			>;
