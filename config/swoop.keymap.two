@@ -11,6 +11,7 @@
 #define LYNUM 3
 #define LYSYML 4
 #define LYSYMR 5
+#define LYFN 6
 
 
 // Key sides
