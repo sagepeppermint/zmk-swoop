@@ -174,8 +174,8 @@
 			bindings = <
 			XXX XXX XXX XXX XXX												XXX &kp N7 &kp N8 &kp N9 XXX
 			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX						XXX &kp N4 &kp N5 &kp N6 XXX
-			XXX XXX XXX XXX XXX												XXX &kp N1 &kp N2 &kp N3 XXX
-			___ ___ ___														&kp BACKSPACE &kp N0 &kp DELETE
+			XXX XXX XXX XXX XXX												&kp N0 &kp N1 &kp N2 &kp N3 XXX
+			___ ___ ___														&kp BACKSPACE &kp SPACE &kp DELETE
 			>;
 		};
 
