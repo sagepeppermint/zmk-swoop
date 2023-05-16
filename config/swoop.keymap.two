@@ -163,7 +163,7 @@
 			label = "Navigation";
 			bindings = <
 			&kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &kp CAPS	&capitalword &kp HOME &kp PG_DN &kp PG_UP &kp END 
-			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL LS(LC(LA(LGUI)))			&kp LG(UP) &kp LEFT &kp DOWN &kp UP &kp RIGHT
+			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL &kp LS(LC(LA(LGUI)))		&kp LG(UP) &kp LEFT &kp DOWN &kp UP &kp RIGHT
 			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) XXX						&kp LG(DOWN) &ctrltab &kp LS(TAB) &alttab &guitab 
 			___ ___ ___														&kp TAB &kp SPACE &kp ESC
 			>;
