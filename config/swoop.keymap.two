@@ -67,7 +67,7 @@
 			label = "SWAPPER_ALT_TAB";
 			#binding-cells = <0>;
 			bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-			ignored-key-positions = <27>;
+			ignored-key-positions = <27 22>;
 		};
 
 		ctrltab: swapper-ctrl-tab {
@@ -75,7 +75,7 @@
 			label = "SWAPPER_CTRL_TAB";
 			#binding-cells = <0>;
 			bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
-			ignored-key-positions = <27>;
+			ignored-key-positions = <27 22>;
 		};
 
 		guitab: swapper-gui-tab {
@@ -83,7 +83,7 @@
 			label = "SWAPPER_GUI_TAB";
 			#binding-cells = <0>;
 			bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-			ignored-key-positions = <27>;
+			ignored-key-positions = <27 22>;
 		};
 		
 		numberword: number-word {
@@ -173,8 +173,8 @@
 			label = "Number";
 			bindings = <
 			XXX XXX XXX XXX XXX												XXX &kp N7 &kp N8 &kp N9 XXX
-			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX						XXX &kp N4 &kp N5 &kp N6 XXX
-			XXX XXX XXX XXX XXX												&kp N0 &kp N1 &kp N2 &kp N3 XXX
+			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX						XXX &kp N4 &kp N5 &kp N6 &kp N0
+			&guitab &alttab &kp LS(TAB) &ctrltab XXX						&kp N0 &kp N1 &kp N2 &kp N3 XXX
 			___ ___ ___														&kp BACKSPACE &kp SPACE &kp DELETE
 			>;
 		};
