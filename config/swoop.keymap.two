@@ -144,8 +144,8 @@
 			bindings = <
 			&kp F &kp L &kp H &kp D &kp V           						&kp Z &kp G  &kp O &kp U &kp DOT 
 			&kp S &kp R &kp N &kp T &kp M        							&kp P &kp Y &kp E &kp I &kp A
-			&kp X &kp J &kp B &kp K &kp Q           						&kp C &kp W &kp SQT &kp COMMA &kp SEMICOLON
-			&kp DELETE &kp BACKSPACE &kp ENTER 								&kp TAB &kp SPACE &kp ESC
+			&hml LGUI X &hml LALT J &hml LSHIFT B &hml LCTRL K &kp Q        &kp C &hmr RCTRL W &hmr RSHIFT SQT &hmr RALT COMMA &hmr RGUI SEMICOLON
+			XXX &kp BACKSPACE XXX 											XXX &kp SPACE XXX
 			>;
 		};
 
@@ -162,9 +162,9 @@
 		number_navigation_layer {
 			label = "Number and navigation";
 			bindings = <
-			XXX XXX XXX XXX XXX												&kp PG_UP &kp HOME &kp UP &kp END XXX
-			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5								&kp PG_DN &kp LEFT &kp DOWN &kp RIGHT XXX
-			&kp N6 &kp N7 &kp N8 &kp N9 &kp N0								XXX XXX XXX XXX XXX
+			XXX XXX XXX XXX XXX												XXX &kp HOME &kp UP &kp END &kp DELETE
+			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5								XXX &kp LEFT &kp DOWN &kp RIGHT &kp ENTER
+			&hml LGUI N6 &hml LALT N7 &hml LSHIFT N8 &hml LCTRL N9 &kp N0	XXX &hmr RCTRL PG_UP &hmr RSHIFT PG_DN &hmr RALT TAB &hmr RGUI ESC
 			___ ___ ___														___ ___ ___
 			>;
 		};
@@ -174,7 +174,7 @@
 			bindings = <
 			&kp SQT &kp DQT &kp CARET &kp QUESTION &kp GRAVE				&kp LEFT_BRACE &kp LESS_THAN &kp COLON &kp GREATER_THAN &kp RIGHT_BRACE
 			&kp EXCLAMATION &kp AT &kp HASH &kp DOLLAR &kp PERCENT			&kp LEFT_BRACKET &kp LEFT_PARENTHESIS &kp UNDERSCORE &kp RIGHT_PARENTHESIS &kp RIGHT_BRACKET
-			&kp PIPE &kp SEMICOLON &kp AMPERSAND &kp BSLH &kp TILDE			&kp STAR &kp FSLH &kp MINUS &kp PLUS &kp EQUAL
+			&hml LGUI PIPE &hml LALT SEMICOLON &hml LSHIFT AMPERSAND &hml LCTRL BSLH &kp TILDE			&kp STAR &hmr RCTRL FSLH &hmr RSHIFT MINUS &hmr RALT PLUS &hmr RGUI EQUAL
 			___ ___ ___														___ ___ ___
 			>;
 		};
