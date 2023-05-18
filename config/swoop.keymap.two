@@ -145,7 +145,7 @@
 			&kp F &kp L &kp H &kp D &kp V           						&kp Z &kp G  &kp O &kp U &kp DOT 
 			&kp S &kp R &kp N &kp T &kp M        							&kp P &kp Y &kp E &kp I &kp A
 			&hml LGUI X &hml LALT J &hml LSHIFT B &hml LCTRL K &kp Q        &kp C &hmr RCTRL W &hmr RSHIFT SQT &hmr RALT COMMA &hmr RGUI SEMICOLON
-			&kp DELETE &kp BACKSPACE &kp ENTER 								&kp TAB &kp SPACE &kp ESC
+			&kp ESC &tlt LYNAV SPACE &tlt LYSYM TAB							&tlt LYFN ENTER &tlt LYNUM BACKSPACE &kp DELETE								
 			>;
 		};
 
@@ -155,27 +155,27 @@
 			&kp Q &kp W &kp E &kp R &kp T									&kp Y &kp U  &kp I &kp O &kp P 
 			&kp A &kp S &kp D &kp F &kp G									&kp H &kp J &kp K &kp L &kp SEMICOLON
 			&kp Z &kp X &kp C &kp V &kp B									&kp N &kp M &kp COMMA &kp DOT &kp SQT
-			&kp DELETE &tlt LYNAV BACKSPACE &tlt LYNUM ENTER 				&tlt LYFN TAB &tlt LYSYM SPACE &kp ESC 			
+			&kp ESC &tlt LYNAV SPACE &tlt LYSYM TAB							&tlt LYFN ENTER &tlt LYNUM BACKSPACE &kp DELETE			
 			>;
 		};
 
 		navigation_layer {
 			label = "Navigation";
 			bindings = <
-			&kp LG(UP) &kp HOME &kp UP &kp END &kp PG_UP						XXX XXX XXX XXX XXX
-			&kp LG(DOWN) &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN					XXX XXX XXX XXX XXX
-			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) XXX							&kp RS(RC(RA(RGUI))) &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
-			&kp DELETE &kp BACKSPACE &kp ENTER									___ ___ ___
+			&kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &kp CAPS	&kp PG_UP &kp HOME &kp UP &kp END &kp LG(UP)
+			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) XXX 					&kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp LG(DOWN)				
+			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL &kp LS(LC(LA(LGUI)))		XXX XXX XXX XXX XXX
+			___ ___ ___														&kp ENTER &kp BACKSPACE &kp DELETE
 			>;
 		};
 
-		number_navigation_layer {
-			label = "Number and navigation";
+		number_layer {
+			label = "Number";
 			bindings = <
-			XXX XXX XXX XXX XXX												XXX &kp HOME &kp UP &kp END &kp DELETE
-			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5								XXX &kp LEFT &kp DOWN &kp RIGHT &kp ENTER
-			&hml LGUI N6 &hml LALT N7 &hml LSHIFT N8 &hml LCTRL N9 &kp N0	XXX &hmr RCTRL PG_UP &hmr RSHIFT PG_DN &hmr RALT TAB &hmr RGUI ESC
-			___ ___ ___														___ ___ ___
+			XXX XXX XXX XXX XXX												XXX XXX XXX XXX XXX
+			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5								XXX XXX XXX XXX XXX
+			&kp N6 &kp N7 &kp N8 &kp N9 &kp N0								XXX &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
+			&kp ESC &kp SPACE &kp TAB										___ ___ ___
 			>;
 		};
 
@@ -189,43 +189,13 @@
 			>;
 		};
 
-		navigation_layer {
-			label = "Navigation";
-			bindings = <
-			&kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &kp CAPS	&capitalword &kp HOME &kp PG_DN &kp PG_UP &kp END 
-			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL &kp LS(LC(LA(LGUI)))		&kp LG(UP) &kp LEFT &kp DOWN &kp UP &kp RIGHT
-			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) XXX						&kp LG(DOWN) &ctrltab &kp LS(TAB) &alttab &guitab 
-			___ ___ ___														&kp TAB &kp SPACE &kp ESC
-			>;
-		};
-
-		number_layer {
-			label = "Number";
-			bindings = <
-			XXX XXX XXX XXX XXX												XXX &kp N7 &kp N8 &kp N9 XXX
-			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL XXX						XXX &kp N4 &kp N5 &kp N6 &kp N0
-			&guitab &alttab &kp LS(TAB) &ctrltab XXX						&kp N0 &kp N1 &kp N2 &kp N3 XXX
-			___ ___ ___														&kp BACKSPACE &kp SPACE &kp DELETE
-			>;
-		};
-
-		symbol_layer {
-			label = "Symbol";
-			bindings = <
-			&kp LT &kp LBRC &kp LBKT &kp LPAR &kp TILDE						&kp CARET &kp RPAR &kp RBKT &kp RBRC &kp GT
-			&kp MINUS &kp STAR &kp EQUAL &kp UNDERSCORE &kp DOLLAR			&kp HASH &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
-			&kp PLUS &kp PIPE &kp AT &kp FSLH &kp PERCENT					&kp GRAVE &kp BSLH &kp AMPERSAND &kp QUESTION &kp EXCLAMATION
-			&kp DELETE &kp BACKSPACE &kp ENTER								___ ___ ___
-			>;
-		};
-
 		function_layer {
 			label = "Function";
 			bindings = <
 			&kp F1 &kp F2 &kp F3 &kp F4 &kp PRINTSCREEN						&to LYQWERTY &to LYDWARF &kp C_BRI_DN &kp C_BRI_UP &kp C_AL_CALC
-			&kp F5 &kp F6 &kp F7 &kp F8 &kp SCROLLLOCK						&out OUT_TOG &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
-			&kp F9 &kp F10 &kp F11 &kp F12 &kp PAUSE_BREAK					&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
-			&kp DELETE &kp BACKSPACE &kp K_APP								___ ___ ___
+			&kp F5 &kp F6 &kp F7 &kp F8 &kp SCROLLLOCK						&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
+			&kp F9 &kp F10 &kp F11 &kp F12 &kp PAUSE_BREAK					&out OUT_TOG &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
+			___ ___ &kp K_APP												___ ___ ___
 			>;
 		};
 
