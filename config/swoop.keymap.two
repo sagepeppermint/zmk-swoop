@@ -145,7 +145,7 @@
 			&kp F &kp L &kp H &kp D &kp V           						&kp Z &kp G  &kp O &kp U &kp DOT 
 			&kp S &kp R &kp N &kp T &kp M        							&kp P &kp Y &kp E &kp I &kp A
 			&hml LGUI X &hml LALT J &hml LSHIFT B &hml LCTRL K &kp Q        &kp C &hmr RCTRL W &hmr RSHIFT SQT &hmr RALT COMMA &hmr RGUI SEMICOLON
-			XXX &kp BACKSPACE XXX 											XXX &kp SPACE XXX
+			&kp DELETE &kp BACKSPACE &kp ENTER 								&kp TAB &kp SPACE &kp ESC
 			>;
 		};
 
@@ -156,6 +156,16 @@
 			&kp A &kp S &kp D &kp F &kp G									&kp H &kp J &kp K &kp L &kp SEMICOLON
 			&kp Z &kp X &kp C &kp V &kp B									&kp N &kp M &kp COMMA &kp DOT &kp SQT
 			&kp DELETE &tlt LYNAV BACKSPACE &tlt LYNUM ENTER 				&tlt LYFN TAB &tlt LYSYM SPACE &kp ESC 			
+			>;
+		};
+
+		navigation_layer {
+			label = "Navigation";
+			bindings = <
+			&kp LG(UP) &kp HOME &kp UP &kp END &kp PG_UP						XXX XXX XXX XXX XXX
+			&kp LG(DOWN) &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN					XXX XXX XXX XXX XXX
+			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) XXX							&kp RS(RC(RA(RGUI))) &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
+			&kp DELETE &kp BACKSPACE &kp ENTER									___ ___ ___
 			>;
 		};
 
