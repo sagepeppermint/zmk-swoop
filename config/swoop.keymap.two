@@ -125,7 +125,7 @@
 		tspacemorph: thumb-space-morph {
 			compatible = "zmk,behavior-hold-tap";
 			label = "THUMB_SPACE_MORPH";
-			#binding-cells = <1>;
+			#binding-cells = <2>;
 			flavor = "balanced";
 			tapping-term-ms = <175>;
 			quick-tap-ms = <175>;
