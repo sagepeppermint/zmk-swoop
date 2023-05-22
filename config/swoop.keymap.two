@@ -235,7 +235,7 @@
 			label = "lock_lynav";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
-			bindings = <&macro_tap &to LYDWARF &tog LYNAV>;
+			bindings = <&macro_tap &to LYDWARF &to LYNAV>;
 		};
 
 		lock_lynum: lock_lynum {
