@@ -24,6 +24,11 @@
 #define XXX &none
 #define ___ &trans
 
+&sk {  // sticky-key config
+	release-after-ms = <600>;  // release after 0.6s
+	quick-release;             // no double capitalization when rolling keys
+};
+
 / {
 	behaviors {
 
@@ -33,8 +38,8 @@
 			#binding-cells = <2>;
 			flavor = "balanced";
 			tapping-term-ms = <300>;
-			quick-tap-ms = <200>;
-			global-quick-tap-ms = <260>;
+			quick-tap-ms = <175>;
+			global-quick-tap-ms = <220>;
 			bindings = <&kp>, <&kp>;
 			hold-trigger-key-positions = <KEYS_RIGHT KEYS_RIGHT_THUMB>;
 			hold-trigger-on-release;
@@ -46,8 +51,8 @@
 			#binding-cells = <2>;
 			flavor = "balanced";
 			tapping-term-ms = <300>;
-			quick-tap-ms = <200>;
-			global-quick-tap-ms = <260>;
+			quick-tap-ms = <175>;
+			global-quick-tap-ms = <220>;
 			bindings = <&kp>, <&kp>;
 			hold-trigger-key-positions = <KEYS_LEFT KEYS_LEFT_THUMB>;
 			hold-trigger-on-release;
@@ -58,9 +63,9 @@
 			label = "THUMB_LAYER_TAP";
 			#binding-cells = <2>;
 			flavor = "balanced";
-			tapping-term-ms = <200>;
-			quick-tap-ms = <200>;
-			global-quick-tap-ms = <260>;
+			tapping-term-ms = <175>;
+			quick-tap-ms = <175>;
+			global-quick-tap-ms = <220>;
 			bindings = <&mo>, <&kp>;
 		};
 
@@ -108,6 +113,26 @@
 						ignore-numbers;
 						ignore-modifiers;
 		};
+
+		spacemorph: space-morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_MORPH";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&macro_spcdot>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+		tspacemorph: thumb-space-morph {
+			compatible = "zmk,behavior-hold-tap";
+			label = "THUMB_SPACE_MORPH";
+			#binding-cells = <1>;
+			flavor = "balanced";
+			tapping-term-ms = <175>;
+			quick-tap-ms = <175>;
+			global-quick-tap-ms = <220>;
+			bindings = <&mo>, <&spacemorph>;
+		};
+
 	};
 
 	combos {
@@ -115,7 +140,7 @@
 
 		combo-esc {
 			timeout-ms = <50>;
-			global-quick-tap-ms = <260>;
+			global-quick-tap-ms = <220>;
 			key-positions = <1 2>;
 			layers = <LYDWARF LYQWERTY>;
 			bindings = <&kp ESC>;
@@ -123,7 +148,7 @@
 
 		combo-capitalword {
 			timeout-ms = <50>;
-			global-quick-tap-ms = <260>;
+			global-quick-tap-ms = <220>;
 			key-positions = <2 3>;
 			layers = <LYDWARF LYQWERTY>;
 			bindings = <&capitalword>;
@@ -131,7 +156,7 @@
 
 		combo-numword {
 			timeout-ms = <50>;
-			global-quick-tap-ms = <260>;
+			global-quick-tap-ms = <220>;
 			key-positions = <6 7>;
 			layers = <LYDWARF LYQWERTY LYNUMR>;
 			bindings = <&numberword>;
@@ -139,13 +164,25 @@
 		
 		combo-mouse {
 			timeout-ms = <50>;
-			global-quick-tap-ms = <260>;
+			global-quick-tap-ms = <220>;
 			key-positions = <7 8>;
 			layers = <LYDWARF LYQWERTY LYMOUSE>;
 			bindings = <&tog LYMOUSE>;
 		};
 
 	};
+
+	macros {
+
+		macro_spcdot: macro_spcdot {
+			label = "SPACE_DOT";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&macro_tap &kp DOT &kp SPACE &sk LSHFT>;
+		};
+
+	};
+
 	
 	keymap {
 		compatible = "zmk,keymap";
@@ -156,7 +193,7 @@
 			&kp F &kp L &kp H &kp D &kp V           						&kp Z &kp G  &kp O &kp U &kp DOT 
 			&hml LGUI S &hml LALT R &hml LSHIFT N &hml LCTRL T &kp M        &kp P &hmr RCTRL Y &hmr RSHIFT E &hmr RALT I &hmr RGUI A
 			&kp X &kp J &kp B &kp K &kp Q           						&kp C &kp W &kp SQT &kp COMMA &kp SEMICOLON
-			&kp ESC &tlt LYNAV SPACE &kp TAB								&tlt LYSYM ENTER &tlt LYNUM BACKSPACE &tlt LYFN DELETE								
+			&kp ESC &tspacemorph LYNAV  &kp TAB								&tlt LYSYM ENTER &tlt LYNUM BACKSPACE &tlt LYFN DELETE								
 			>;
 		};
 
@@ -166,7 +203,7 @@
 			&kp Q &kp W &kp E &kp R &kp T									&kp Y &kp U  &kp I &kp O &kp P 
 			&hml LGUI A &hml LALT S &hml LSHIFT D &hml LCTRL F &kp G		&kp H &hmr RCTRL J &hmr RSHIFT K &hmr RALT L &hmr RGUI SEMICOLON
 			&kp Z &kp X &kp C &kp V &kp B									&kp N &kp M &kp COMMA &kp DOT &kp SQT
-			&kp ESC &tlt LYNAV SPACE &tlt LYSYM TAB							&tlt LYFN ENTER &tlt LYNUM BACKSPACE &kp DELETE			
+			&kp ESC &tspacemorph LYNAV  &tlt LYSYM TAB						&tlt LYFN ENTER &tlt LYNUM BACKSPACE &kp DELETE			
 			>;
 		};
 
