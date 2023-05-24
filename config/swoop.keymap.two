@@ -42,7 +42,7 @@
 			flavor = "balanced";
 			tapping-term-ms = <300>;
 			quick-tap-ms = <175>;
-			global-quick-tap-ms = <220>;
+			global-quick-tap-ms = <175>;
 			bindings = <&kp>, <&kp>;
 			hold-trigger-key-positions = <KEYS_RIGHT KEYS_RIGHT_THUMB>;
 			hold-trigger-on-release;
@@ -55,7 +55,7 @@
 			flavor = "balanced";
 			tapping-term-ms = <300>;
 			quick-tap-ms = <175>;
-			global-quick-tap-ms = <220>;
+			global-quick-tap-ms = <175>;
 			bindings = <&kp>, <&kp>;
 			hold-trigger-key-positions = <KEYS_LEFT KEYS_LEFT_THUMB>;
 			hold-trigger-on-release;
@@ -68,7 +68,7 @@
 			flavor = "balanced";
 			tapping-term-ms = <300>;
 			quick-tap-ms = <175>;
-			global-quick-tap-ms = <220>;
+			global-quick-tap-ms = <175>;
 			bindings = <&mo>, <&kp>;
 			hold-trigger-key-positions = <KEYS_RIGHT KEYS_RIGHT_THUMB>;
 		};
@@ -80,7 +80,7 @@
 			flavor = "balanced";
 			tapping-term-ms = <300>;
 			quick-tap-ms = <175>;
-			global-quick-tap-ms = <220>;
+			global-quick-tap-ms = <175>;
 			bindings = <&mo>, <&kp>;
 			hold-trigger-key-positions = <KEYS_LEFT KEYS_LEFT_THUMB>;
 		};
@@ -92,7 +92,7 @@
 			flavor = "balanced";
 			tapping-term-ms = <175>;
 			quick-tap-ms = <175>;
-			global-quick-tap-ms = <220>;
+			global-quick-tap-ms = <175>;
 			bindings = <&mo>, <&kp>;
 		};
 
@@ -156,7 +156,7 @@
 			flavor = "balanced";
 			tapping-term-ms = <175>;
 			quick-tap-ms = <175>;
-			global-quick-tap-ms = <220>;
+			global-quick-tap-ms = <175>;
 			bindings = <&mo>, <&spacemorph>;
 		};
 
@@ -168,7 +168,7 @@
 		// left
 		combo-esc {
 			timeout-ms = <50>;
-			global-quick-tap-ms = <220>;
+			global-quick-tap-ms = <175>;
 			key-positions = <1 2>;
 			layers = <LYDWARF LYQWERTY>;
 			bindings = <&kp ESC>;
@@ -176,7 +176,7 @@
 
 		combo-capitalword {
 			timeout-ms = <50>;
-			global-quick-tap-ms = <220>;
+			global-quick-tap-ms = <175>;
 			key-positions = <2 3>;
 			layers = <LYDWARF LYQWERTY>;
 			bindings = <&capitalword>;
@@ -185,7 +185,7 @@
 		//right
 		combo-numword {
 			timeout-ms = <50>;
-			global-quick-tap-ms = <220>;
+			global-quick-tap-ms = <175>;
 			key-positions = <6 7>;
 			layers = <LYDWARF LYQWERTY LYNUMR>;
 			bindings = <&numberword>;
@@ -193,7 +193,7 @@
 
 		combo-del {
 			timeout-ms = <50>;
-			global-quick-tap-ms = <220>;
+			global-quick-tap-ms = <175>;
 			key-positions = <7 8>;
 			layers = <LYDWARF LYQWERTY>;
 			bindings = <&kp DEL>;
@@ -201,7 +201,7 @@
 		
 		combo-mouse {
 			timeout-ms = <50>;
-			global-quick-tap-ms = <220>;
+			global-quick-tap-ms = <175>;
 			key-positions = <26 27>;
 			layers = <LYDWARF LYQWERTY LYMOUSE>;
 			bindings = <&tog LYMOUSE>;
