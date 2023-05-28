@@ -341,7 +341,7 @@
 			label = "Number";
 			bindings = <
 			&kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT								XXX XXX XXX XXX XXX
-			&kp SPACE &kp N4 &kp N5 &kp N6 &kp MINUS							&kp CAPS &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
+			&kp DOT &kp N4 &kp N5 &kp N6 &kp MINUS								&kp CAPS &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
 			&kp BSLH &kp N1 &kp N2 &kp N3 &kp FSLH  							XXX &lock_lynum &lock_lynav &to LYDWARF &to LYQWERTY
 			&kp GRAVE &kp N0 &kp EQUAL											___ ___ ___
 			>;
