@@ -70,6 +70,7 @@
 			global-quick-tap-ms = <150>;
 			bindings = <&mo>, <&kp>;
 			hold-trigger-key-positions = <KEYS_RIGHT KEYS_RIGHT_THUMB>;
+			hold-trigger-on-release;
 		};
 
 		hlr: homerow-layer-right {
@@ -82,6 +83,7 @@
 			global-quick-tap-ms = <150>;
 			bindings = <&mo>, <&kp>;
 			hold-trigger-key-positions = <KEYS_LEFT KEYS_LEFT_THUMB>;
+			hold-trigger-on-release;
 		};
 
 		tlt: thumb-layer-tap {
@@ -296,7 +298,7 @@
 			label = "Base";
 			bindings = <
 			&kp F &kp L &kp H &kp D &kp V           							&kp Z &kp G  &kp O &kp U &kp DOT 
-			&hml LGUI S &hml LALT R &hml LSHIFT N &hml LCTRL T &kp M        	&kp P &hmr RCTRL Y &hmr RSHIFT E &hmr RALT I &hmr RGUI A
+			&hml LSHIFT S &hml LALT R &hml LSHIFT N &hml LCTRL T &kp M        	&kp P &hmr RCTRL Y &hmr RSHIFT E &hmr RALT I &hmr RGUI A
 			&bsl LSHIFT X &kp J &kp B &hll LYSCT K &kp Q           				&kp C &hlr LYSCT W &kp SQT &kp COMMA &bsr RSHIFT SEMICOLON
 			XXX &tlt LYLNUM ENTER &sl LYLNAV									&sl LYRSYM &spacemorph XXX								
 			>;
@@ -309,6 +311,26 @@
 			&hml LGUI A &hml LALT S &hml LSHIFT D &hml LCTRL F &kp G			&kp H &hmr RCTRL J &hmr RSHIFT K &hmr RALT L &hmr RGUI SEMICOLON
 			&kp Z &kp X &kp C &hll LYSCT V &kp B								&kp N &hlr LYSCT M &kp COMMA &kp DOT &kp SQT
 			&tlt LYMEDIA ESC &tspacemorph LYNAV XXX &tlt LYSYMR TAB				&tlt LYSYML ENTER &tlt LYNUM BACKSPACE &tlt LYFN DELETE			
+			>;
+		};
+
+		mouse_layer {
+			label = "Mouse";
+			bindings = <
+			XXX XXX XXX XXX XXX					XXX U_BTN1 U_WH_U U_BTN2 XXX
+			&kp LSHFT U_BTN2 XXX U_BTN1 XXX		XXX U_MS_L U_MS_D U_MS_U U_MS_R			
+			XXX &kp LCTRL &kp LALT XXX XXX		XXX U_WH_L U_WH_D U_WH_R XXX 
+			___ ___ ___							___ ___ ___
+			>;
+		};
+
+		mouse_layer {
+			label = "Mouse";
+			bindings = <
+			XXX XXX XXX XXX XXX		XXX XXX XXX XXX XXX
+			XXX XXX XXX XXX XXX		XXX XXX XXX XXX XXX			
+			XXX XXX XXX XXX XXX		XXX XXX XXX XXX XXX 
+			___ ___ ___				___ ___ ___
 			>;
 		};
 
