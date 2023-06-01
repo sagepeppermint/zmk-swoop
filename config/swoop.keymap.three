@@ -14,6 +14,7 @@
 #define LYRNUM 6
 #define LYMOUSE 7
 #define LYSCT 8
+#define LYMEDIA 9
 
 // Key sides
 #define KEYS_LEFT 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 
@@ -213,6 +214,14 @@
 			bindings = <&kp TAB>;
 		};
 
+		combo-media {
+			timeout-ms = <50>;
+			global-quick-tap-ms = <150>;
+			key-positions = <22 23>;
+			layers = <LYDWARF LYQWERTY LYMEDIA>;
+			bindings = <&tog LYMEDIA>;
+		};
+
 		// right
 		combo-numword {
 			timeout-ms = <50>;
@@ -315,7 +324,7 @@
 		navigation_layer {
 			label = "Left Navigation";
 			bindings = <
-			&kp ESC &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &kp C_MUTE		XXX &kp PG_UP &kp HOME &kp END &kp PG_DN
+			&kp ESC &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &kp C_MUTE		XXX &kp HOME &kp PG_DN &kp PG_UP &kp END 
 			&sk LGUI &sk LALT &sk LSHIFT &sk LCTRL &kp CAPS						&kp DEL &kp LEFT &kp DOWN &kp UP &kp RIGHT				
 			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)	XXX							XXX &kp BACKSPACE &kp TAB &kp ENTER XXX
 			___ ___ ___															___ &mo LYBOTH ___
@@ -365,7 +374,7 @@
 		mouse_layer {
 			label = "Mouse";
 			bindings = <
-			XXX XXX XXX XXX XXX													XXX XXX XXX XXX XXX 
+			&tog LYMOUSE &tog LYMOUSE &tog LYMOUSE &tog LYMOUSE &tog LYMOUSE	&tog LYMOUSE &tog LYMOUSE &tog LYMOUSE &tog LYMOUSE &tog LYMOUSE 
 			U_MS_L U_MS_U U_MS_D U_MS_R XXX										XXX U_MS_L U_MS_D U_MS_U U_MS_R 
 			U_WH_L U_WH_U U_WH_D U_WH_R XXX										XXX U_WH_L U_WH_D U_WH_U U_WH_R
 			U_BTN3 U_BTN2 U_BTN1												U_BTN1 U_BTN2 U_BTN3
@@ -386,9 +395,9 @@
 			label = "Media";
 			bindings = <
 			XXX XXX XXX XXX XXX													XXX &kp C_BRI_DN &kp C_BRI_UP &kp C_AL_CALC XXX
-			XXX XXX XXX XXX XXX													&out OUT_TOG &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE XXX
+			&tog LYMEDIA &tog LYMEDIA &tog LYMEDIA &tog LYMEDIA XXX				&out OUT_TOG &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE XXX
 			XXX XXX XXX XXX XXX													&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
-			___ ___ ___															XXX &kp C_PLAY_PAUSE XXX
+			___ ___ ___															&kp C_PLAY_PAUSE XXX XXX
 			>;
 		};
 
