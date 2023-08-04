@@ -8,7 +8,7 @@
 #define LYDWARF 0
 #define LYQWERTY 1
 #define LYLNAV 2
-#define LYRSYM 3
+#define LYFUN 3
 #define LYBOTH 4
 #define LYLNUM 5
 #define LYRNUM 6
@@ -307,7 +307,7 @@
 			&kp F &kp L &kp H &kp D &kp V										&kp Z &kp G &kp O &kp U &kp DOT
 			&hml LGUI S &hml LALT R &hml LSHIFT N &hml LCTRL T &kp M        	&kp P &hmr RCTRL Y &hmr RSHIFT E &hmr RALT I &hmr RGUI A
 			&bsl LSHIFT X &kp J &kp B &hll LYSCT K &kp Q           				&kp C &hlr LYSCT W &kp SQT &kp COMMA &bsr RSHIFT SEMICOLON
-			XXX &sl LYLNAV &tlt LYLNUM ENTER 									&spacemorph &sl LYRSYM XXX
+			XXX &tlt LYFUN ENTER &tlt LYLNAV BACKSPACE  						&tspacemorph XXX &sl LYRSYM XXX
 			>;
 		};
 
@@ -324,25 +324,25 @@
 		navigation_layer {
 			label = "Left Navigation";
 			bindings = <
-			&kp ESC &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &kp C_MUTE		XXX &kp HOME &kp PG_DN &kp PG_UP &kp END
-			&sk LGUI &sk LALT &sk LSHIFT &sk LCTRL &kp CAPS						&kp DEL &kp LEFT &kp DOWN &kp UP &kp RIGHT
-			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)	XXX							XXX &kp BACKSPACE &kp TAB &kp ENTER XXX
-			___ ___ ___															___ &mo LYBOTH ___
+			&kp ESC &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &kp C_MUTE		&kp HOME &kp PG_DN &kp PG_UP &kp END XXX 
+			&sk LGUI &sk LALT &sk LSHIFT &sk LCTRL &kp CAPS						&kp LEFT &kp DOWN &kp UP &kp RIGHT XXX 
+			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)	XXX							XXX &kp BACKSPACE &kp DEL &kp ENTER XXX
+			___ ___ ___															&kp SPACE &kp TAB ___
 			>;
 		};
 
-		symbol_layer {
-			label = "Right Symbol";
+		function_layer {
+			label = "Left Function";
 			bindings = <
-			&kp LT &kp LBRC &kp LBKT &kp LPAR &kp TILDE							&kp CARET &kp RPAR &kp RBKT &kp RBRC &kp GT
-			&kp MINUS &kp STAR &kp EQUAL &kp UNDERSCORE &kp DOLLAR				&kp HASH &sk RCTRL &sk RSHIFT &sk RALT &sk RGUI
-			&kp PLUS &kp PIPE &kp AT &kp FSLH &kp PERCENT						&kp GRAVE &kp BSLH &kp AMPERSAND &kp QUESTION &kp EXCLAMATION
-			___ &mo LYBOTH ___													___ ___ ___
+			___ ___ ___ ___ ___													&kp PRINTSCREEN &kp F1 &kp F2 &kp F3 &kp F4
+			&sk LGUI &sk LALT &sk LSHIFT &sk LCTRL ___							&kp SCROLLLOCK &kp F5 &kp F6 &kp F7 &kp F8
+			___ ___ ___ ___ ___													&kp PAUSE_BREAK &kp F9 &kp F10 &kp F11 &kp F12
+			___ ___ ___															&kp SPACE &kp TAB ___
 			>;
 		};
 
-		both_layer {
-			label = "Both";
+		num_layer {
+			label = "Right Number";
 			bindings = <
 			&kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PERCENT						&kp CARET &kp AMPERSAND &kp STAR &kp LPAR &kp RPAR
 			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5									&kp N6 &kp N7 &kp N8 &kp N9 &kp N0
