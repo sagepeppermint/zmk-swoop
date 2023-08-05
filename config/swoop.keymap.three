@@ -291,7 +291,7 @@
 			&kp F &kp L &kp H &kp D &kp V										&kp Z &kp G &kp O &kp U &kp DOT
 			&hml LGUI S &hml LALT R &hml LSHIFT N &hml LCTRL T &kp M        	&kp P &hmr RCTRL Y &hmr RSHIFT E &hmr RALT I &hmr RGUI A
 			&bsl LSHIFT X &kp J &kp B &hll LYSCT K &kp Q           				&kp C &hlr LYSCT W &kp SQT &kp COMMA &bsr RSHIFT SEMICOLON
-			&tlt LYFUN DELETE &tlt LYFUN ENTER &tlt LYLNAV BACKSPACE  			&tspacemorph LYLNUM XXX &tlt LYLSYM TAB &kp ESC
+			&tlt LYCONFIG DELETE &tlt LYFUN ENTER &tlt LYLNAV BACKSPACE  			&tspacemorph LYLNUM XXX &tlt LYLSYM TAB &kp ESC
 			>;
 		};
 
@@ -301,7 +301,7 @@
 			&kp Q &kp W &kp E &kp R &kp T										&kp Y &kp U  &kp I &kp O &kp P
 			&hml LGUI A &hml LALT S &hml LSHIFT D &hml LCTRL F &kp G			&kp H &hmr RCTRL J &hmr RSHIFT K &hmr RALT L &hmr RGUI SEMICOLON
 			&bsl LSHIFT Z &kp X &kp C &hll LYSCT V &kp B						&kp N &hlr LYSCT M &kp COMMA &kp DOT &bsr RSHIFT SQT
-			&tlt LYFUN DELETE &tlt LYFUN ENTER &tlt LYLNAV BACKSPACE  			&tspacemorph LYLNUM XXX &tlt LYLSYM TAB &kp ESC
+			&tlt LYCONFIG DELETE &tlt LYFUN ENTER &tlt LYLNAV BACKSPACE  			&tspacemorph LYLNUM XXX &tlt LYLSYM TAB &kp ESC
 			>;
 		};
 
