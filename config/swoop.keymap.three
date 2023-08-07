@@ -330,7 +330,7 @@
 			bindings = <
 			&kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT								___ ___ ___ ___ ___
 			&kp FSLH &kp N4 &kp N5 &kp N6 &kp BSLH								___ &sk RCTRL &sk RSHIFT &sk RALT &sk RGUI
-			&kp GRAVE &kp N1 &kp N2 &kp N3 &kp EQUAL							___ ___ ___ ___ ___
+			&kp GRAVE &kp N1 &kp N2 &kp N3 &kp EQUAL							___ &kp BACKSPACE ___ ___ ___
 			&kp DOT &kp MINUS &kp N0											___ ___ ___
 			>;
 		};
@@ -378,7 +378,7 @@
 		config_layer {
 			label = "Config";
 			bindings = <
-			___ ___ ___ ___ ___			XXX &kp C_BRI_DN &kp C_BRI_UP &tog LYDWARF &tog LYQWERTY
+			___ ___ ___ ___ ___			XXX &kp C_BRI_DN &kp C_BRI_UP &to LYDWARF &to LYQWERTY
 			___ ___ ___ ___ ___			&out OUT_TOG &ctrltab &kp RSHIFT &alttab &guitab
 			___ ___ ___ ___ ___			&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
 			___ ___ ___					XXX XXX XXX
