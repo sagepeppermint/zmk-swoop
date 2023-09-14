@@ -330,7 +330,7 @@
 			bindings = <
 			&kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT								___ ___ ___ ___ ___
 			&kp FSLH &kp N4 &kp N5 &kp N6 &kp BSLH								___ &sk RCTRL &sk RSHIFT &sk RALT &sk RGUI
-			&kp GRAVE &kp N1 &kp N2 &kp N3 &kp EQUAL							___ &kp BACKSPACE ___ ___ ___
+			&kp GRAVE &kp N1 &kp N2 &kp N3 &kp EQUAL							&kp INSERT &kp BACKSPACE&kp DEL &kp TAB &kp ENTER
 			&kp DOT &kp MINUS &kp N0											___ ___ ___
 			>;
 		};
@@ -340,7 +340,7 @@
 			bindings = <
 			&kp LBRC &kp AMPERSAND &kp STAR &kp LPAR &kp RBRC					___ ___ ___ ___ ___
 			&kp QUESTION &kp DOLLAR &kp PERCENT &kp CARET &kp PIPE				___ &sk RCTRL &sk RSHIFT &sk RALT &sk RGUI
-			&kp TILDE &kp EXCL &kp AT &kp HASH &kp PLUS							___ ___ ___ ___ ___
+			&kp TILDE &kp EXCL &kp AT &kp HASH &kp PLUS							&kp INSERT &kp BACKSPACE&kp DEL &kp TAB &kp ENTER
 			&kp LPAR &kp UNDERSCORE &kp RPAR 									___ ___ ___
 			>;
 		};
