@@ -310,7 +310,7 @@
 			bindings = <
 			&kp ESC &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &kp C_MUTE		XXX &kp PG_DN &kp UP &kp PG_UP &kp HOME 
 			&sk LGUI &sk LALT &sk LSHIFT &sk LCTRL &kp CAPS						XXX &kp LEFT &kp DOWN &kp RIGHT &kp END  
-			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)	XXX							&kp INSERT &kp BACKSPACE&kp DEL &kp TAB &kp ENTER 
+			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)	XXX							&kp INSERT &kp BACKSPACE &kp DEL &kp TAB &kp ENTER 
 			___ ___ ___															&kp SPACE &kp TAB &kp ESC
 			>;
 		};
