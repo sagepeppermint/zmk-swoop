@@ -33,7 +33,7 @@
 			flavor = "balanced";
 			tapping-term-ms = <300>;
 			quick-tap-ms = <175>;
-			global-quick-tap-ms = <150>;
+			require-prior-idle-ms = <150>;
 			bindings = <&kp>, <&kp>;
 			hold-trigger-key-positions = <KEYS_RIGHT KEYS_RIGHT_THUMB>;
 			hold-trigger-on-release;
@@ -46,7 +46,7 @@
 			flavor = "balanced";
 			tapping-term-ms = <300>;
 			quick-tap-ms = <175>;
-			global-quick-tap-ms = <150>;
+			require-prior-idle-ms = <150>;
 			bindings = <&kp>, <&kp>;
 			hold-trigger-key-positions = <KEYS_LEFT KEYS_LEFT_THUMB>;
 			hold-trigger-on-release;
@@ -59,7 +59,7 @@
 			flavor = "balanced";
 			tapping-term-ms = <200>;
 			quick-tap-ms = <175>;
-			global-quick-tap-ms = <150>;
+			require-prior-idle-ms = <150>;
 			bindings = <&mo>, <&kp>;
 		};
 
@@ -113,7 +113,7 @@
 		
 		// combo-reporting {
 		// 	timeout-ms = <50>;
-		// 	global-quick-tap-ms = <150>;
+		// 	require-prior-idle-ms = <150>;
 		// 	key-positions = <2 3>;
 		// 	layers = <LYDWARF LYQWERTY LYREPORT>;
 		// 	bindings = <&tog LYREPORT>;
@@ -121,7 +121,7 @@
 
 		combo-numword {
 			timeout-ms = <50>;
-			global-quick-tap-ms = <150>;
+			require-prior-idle-ms = <150>;
 			key-positions = <6 7>;
 			layers = <LYDWARF LYQWERTY LYNUM>;
 			bindings = <&numberword>;
