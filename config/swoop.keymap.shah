@@ -24,204 +24,199 @@
 #define ___ &trans
 
 / {
-	behaviors {
+    behaviors {
 
-		hml: homerow-mod-left {
-			compatible = "zmk,behavior-hold-tap";
-			label = "HOMEROW_MOD_LEFT";
-			#binding-cells = <2>;
-			flavor = "balanced";
-			tapping-term-ms = <300>;
-			quick-tap-ms = <175>;
-			require-prior-idle-ms = <150>;
-			bindings = <&kp>, <&kp>;
-			hold-trigger-key-positions = <KEYS_RIGHT KEYS_RIGHT_THUMB>;
-			hold-trigger-on-release;
-		};
+        hml: homerow-mod-left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD_LEFT";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_RIGHT KEYS_RIGHT_THUMB>;
+            hold-trigger-on-release;
+        };
 
-		hmr: homerow-mod-right {
-			compatible = "zmk,behavior-hold-tap";
-			label = "HOMEROW_MOD_RIGHT";
-			#binding-cells = <2>;
-			flavor = "balanced";
-			tapping-term-ms = <300>;
-			quick-tap-ms = <175>;
-			require-prior-idle-ms = <150>;
-			bindings = <&kp>, <&kp>;
-			hold-trigger-key-positions = <KEYS_LEFT KEYS_LEFT_THUMB>;
-			hold-trigger-on-release;
-		};
+        hmr: homerow-mod-right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD_RIGHT";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_LEFT KEYS_LEFT_THUMB>;
+            hold-trigger-on-release;
+        };
 
-		tlt: thumb-layer-tap {
-			compatible = "zmk,behavior-hold-tap";
-			label = "THUMB_LAYER_TAP";
-			#binding-cells = <2>;
-			flavor = "balanced";
-			tapping-term-ms = <200>;
-			quick-tap-ms = <175>;
-			require-prior-idle-ms = <150>;
-			bindings = <&mo>, <&kp>;
-		};
+        tlt: thumb-layer-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB_LAYER_TAP";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            bindings = <&mo>, <&kp>;
+        };
 
-		alttab: swapper-alt-tab {
-			compatible = "zmk,behavior-tri-state";
-			label = "SWAPPER_ALT_TAB";
-			#binding-cells = <0>;
-			bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-			ignored-key-positions = <22>;
-		};
+        alttab: swapper-alt-tab {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER_ALT_TAB";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            ignored-key-positions = <22>;
+        };
 
-		ctrltab: swapper-ctrl-tab {
-			compatible = "zmk,behavior-tri-state";
-			label = "SWAPPER_CTRL_TAB";
-			#binding-cells = <0>;
-			bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
-			ignored-key-positions = <22>;
-		};
+        ctrltab: swapper-ctrl-tab {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER_CTRL_TAB";
+            #binding-cells = <0>;
+            bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
+            ignored-key-positions = <22>;
+        };
 
-		guitab: swapper-gui-tab {
-			compatible = "zmk,behavior-tri-state";
-			label = "SWAPPER_GUI_TAB";
-			#binding-cells = <0>;
-			bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-			ignored-key-positions = <22>;
-		};
-		
-		numberword: number-word {
-			compatible = "zmk,behavior-caps-word";
-			label = "NUMBER_WORD";
-			#binding-cells = <0>;
-			layers = <LYNUM>;
-			continue-list = <BACKSPACE DELETE DOT COMMA FSLH BSLH>;
-			ignore-numbers;
-		};
+        guitab: swapper-gui-tab {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER_GUI_TAB";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+            ignored-key-positions = <22>;
+        };
+        
+        numberword: number-word {
+            compatible = "zmk,behavior-caps-word";
+            label = "NUMBER_WORD";
+            #binding-cells = <0>;
+            layers = <LYNUM>;
+            continue-list = <BACKSPACE DELETE DOT COMMA FSLH BSLH>;
+            ignore-numbers;
+        };
 
-		capitalword: capital-word {
-			compatible = "zmk,behavior-caps-word";
-			label = "CAPITAL_WORD";
-			#binding-cells = <0>;
-						mods = <MOD_LSFT>;
-			continue-list = <UNDERSCORE BACKSPACE DELETE FSLH>;
-						ignore-alphas;
-						ignore-numbers;
-						ignore-modifiers;
-		};
-	};
+        capitalword: capital-word {
+            compatible = "zmk,behavior-caps-word";
+            label = "CAPITAL_WORD";
+            #binding-cells = <0>;
+                        mods = <MOD_LSFT>;
+            continue-list = <UNDERSCORE BACKSPACE DELETE FSLH>;
+                        ignore-alphas;
+                        ignore-numbers;
+                        ignore-modifiers;
+        };
+    };
 
-	combos {
-		compatible = "zmk,combos";
-		
-		// combo-reporting {
-		// 	timeout-ms = <50>;
-		// 	require-prior-idle-ms = <150>;
-		// 	key-positions = <2 3>;
-		// 	layers = <LYDWARF LYQWERTY LYREPORT>;
-		// 	bindings = <&tog LYREPORT>;
-		// };
+    combos {
+        compatible = "zmk,combos";
+        
+        // combo-reporting {
+        //     timeout-ms = <50>;
+        //     require-prior-idle-ms = <150>;
+        //     key-positions = <2 3>;
+        //     layers = <LYDWARF LYQWERTY LYREPORT>;
+        //     bindings = <&tog LYREPORT>;
+        // };
 
-		combo-numword {
-			timeout-ms = <50>;
-			require-prior-idle-ms = <150>;
-			key-positions = <6 7>;
-			layers = <LYDWARF LYQWERTY LYNUM>;
-			bindings = <&numberword>;
-		};
-		
-	};
-	
-	macros {
+        combo-numword {
+            timeout-ms = <50>;
+            require-prior-idle-ms = <150>;
+            key-positions = <6 7>;
+            layers = <LYDWARF LYQWERTY LYNUM>;
+            bindings = <&numberword>;
+        };
+        
+    };
+    
+    macros {
 
-		dictation_macro: dictation_macro {
-			label = "DICTATION_MACRO";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <200>;
-			tap-ms = <200>;
-			bindings
-				= <&macro_press &kp LCTRL>
-				, <&macro_tap &kp GRAVE>
-				, <&macro_release &kp LCTRL>
-				;
-		};
+        dictation_macro: dictation_macro {
+            label = "DICTATION_MACRO";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <200>;
+            tap-ms = <200>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp GRAVE>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
 
-	};
-	
-	keymap {
-		compatible = "zmk,keymap";
-		
-		default_layer {
-			label = "Base";
-			bindings = <
-			&kp F &kp L &kp H &kp D &kp V           						&kp Z &kp G  &kp O &kp U &kp DOT 
-			&hml LGUI S &hml LALT R &hml LSHIFT N &hml LCTRL T &kp M        &kp P &hmr RCTRL Y &hmr RSHIFT E &hmr RALT I &hmr RGUI A
-			&kp X &kp J &kp B &kp K &kp Q           						&kp C &kp W &kp SQT &kp COMMA &kp SEMICOLON
-			&tlt LYFN DELETE &tlt LYREPORT ENTER &tlt LYNUM BACKSPACE 		&tlt LYNAV SPACE &tlt LYSYM TAB &kp ESC 			
-			>;
-		};
+    };
+    
+    keymap {
+        compatible = "zmk,keymap";
+        
+        default_layer {
+            label = "Base";
+            bindings = <
+            &kp F &kp L &kp H &kp D &kp V                                   &kp Z &kp G  &kp O &kp U &kp DOT 
+            &hml LGUI S &hml LALT R &hml LSHIFT N &hml LCTRL T &kp M        &kp P &hmr RCTRL Y &hmr RSHIFT E &hmr RALT I &hmr RGUI A
+            &kp X &kp J &kp B &kp K &kp Q                                   &kp C &kp W &kp SQT &kp COMMA &kp SEMICOLON
+            ___ &tlt LYFN TAB &tlt LYNUM BACKSPACE                          &tlt LYNAV SPACE &ltl LYSYM ENTER ___
+            >;
+        };
 
-		qwerty_layer {
-			label = "QWERTY";
-			bindings = <
-			&kp Q &kp W &kp E &kp R &kp T									&kp Y &kp U  &kp I &kp O &kp P 
-			&hml LGUI A &hml LALT S &hml LSHIFT D &hml LCTRL F &kp G		&kp H &hmr RCTRL J &hmr RSHIFT K &hmr RALT L &hmr RGUI SEMICOLON
-			&kp Z &kp X &kp C &kp V &kp B									&kp N &kp M &kp COMMA &kp DOT &kp SQT
-			&tlt LYFN DELETE &tlt LYNUM BACKSPACE &tlt LYREPORT ENTER		&tlt LYSYM TAB &tlt LYNAV SPACE &kp ESC 			
-			>;
-		};
+        qwerty_layer {
+            label = "QWERTY";
+            bindings = <
+            &kp Q &kp W &kp E &kp R &kp T                                   &kp Y &kp U  &kp I &kp O &kp P 
+            &hml LGUI A &hml LALT S &hml LSHIFT D &hml LCTRL F &kp G        &kp H &hmr RCTRL J &hmr RSHIFT K &hmr RALT L &hmr RGUI SEMICOLON
+            &kp Z &kp X &kp C &kp V &kp B                                   &kp N &kp M &kp COMMA &kp DOT &kp SQT
+            &tlt LYFN DELETE &tlt LYNUM BACKSPACE &tlt LYREPORT ENTER       &tlt LYSYM TAB &tlt LYNAV SPACE &kp ESC             
+            >;
+        };
 
-		navigation_layer {
-			label = "Navigation";
-			bindings = <
-			&kp HOME &kp PG_UP &kp UP &kp PG_DN ___							XXX XXX XXX XXX XXX
-			&kp END &kp LEFT &kp DOWN &kp RIGHT XXX							&kp CAPS &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
-			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) XXX						XXX &capitalword &numberword XXX XXX
-			&kp DELETE &kp ENTER &kp BACKSPACE								___ ___ ___
-			// &kp HOME &kp PG_UP &kp PG_DN &kp END XXX						XXX XXX XXX XXX XXX
-			// &kp LEFT &kp UP &kp DOWN &kp RIGHT XXX							&kp CAPS &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
-			// &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) XXX						XXX &capitalword &numberword XXX XXX
-			// &kp DELETE &kp BACKSPACE &kp ENTER								___ ___ ___
+        navigation_layer {
+            label = "Navigation";
+            bindings = <
+            &kp HOME &kp PG_UP &kp UP &kp PG_DN XXX                         XXX XXX XXX XXX XXX
+            &kp END &kp LEFT &kp DOWN &kp RIGHT XXX                         &kp CAPS &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
+            &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) XXX                     XXX &capitalword &numberword XXX XXX
+            ___ &kp TAB &kp BACKSPACE                                       ___ ___ ___
+            >;
+        };
 
-			>;
-		};
+        number_layer {
+            label = "Number";
+            bindings = <
+            &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &kp TAB   XXX &kp N7 &kp N8 &kp N9 XXX
+            &kp LGUI &kp LALT &kp LSHIFT &kp LCTRL &kp LG(UP)               XXX &kp N4 &kp N5 &kp N6 &kp N0
+            &guitab &alttab &kp LS(TAB) &ctrltab &kp LG(DOWN)               XXX &kp N1 &kp N2 &kp N3 XXX
+            ___ ___ ___                                                     ___ ___ ___
+            >;
+        };
 
-		number_layer {
-			label = "Number";
-			bindings = <
-			&kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &kp TAB	&kp FSLH &kp N7 &kp N8 &kp N9 &kp BSLH
-			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL &kp LG(UP)				&kp COMMA &kp N4 &kp N5 &kp N6 &kp DOT
-			&guitab &alttab &kp LS(TAB) &ctrltab &kp LG(DOWN)				&kp K_CANCEL &kp N1 &kp N2 &kp N3 &kp ENTER
-			&kp K_CANCEL ___ &kp K_CANCEL									&kp N0 &kp BACKSPACE &kp DELETE
-			>;
-		};
+        symbol_layer {
+            label = "Symbol";
+            bindings = <
+            &kp LT &kp LBRC &kp LBKT &kp LPAR &kp TILDE                      &kp CARET &kp RPAR &kp RBKT &kp RBRC &kp GT
+            &kp MINUS &kp STAR &kp EQUAL &kp UNDERSCORE &kp DOLLAR           &kp HASH &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
+            &kp PLUS &kp PIPE &kp AT &kp FSLH &kp PERCENT                    &kp GRAVE &kp BSLH &kp AMPERSAND &kp QUESTION &kp EXCLAMATION
+            ___ ___ ___                                                      ___ ___ ___
+            >;
+        };
 
-		symbol_layer {
-			label = "Symbol";
-			bindings = <
-			&kp LT &kp LBRC &kp LBKT &kp LPAR &kp TILDE						&kp CARET &kp RPAR &kp RBKT &kp RBRC &kp GT
-			&kp MINUS &kp STAR &kp EQUAL &kp UNDERSCORE &kp DOLLAR			&kp HASH &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
-			&kp PLUS &kp PIPE &kp AT &kp FSLH &kp PERCENT					&kp GRAVE &kp BSLH &kp AMPERSAND &kp QUESTION &kp EXCLAMATION
-			&kp DELETE &kp BACKSPACE &kp ENTER								___ ___ ___
-			>;
-		};
+        function_layer {
+            label = "Function";
+            bindings = <
+            &kp C_AL_CALC &kp C_BRI_DN &kp C_BRI_UP &to LYDWARF &to LYQWERTY        &kp PRINTSCREEN &kp F1 &kp F2 &kp F3 &kp F4
+            &kp LGUI &kp LALT &kp LSHIFT &kp LCTRL &out OUT_TOG                     &kp SCROLLLOCK &kp F5 &kp F6 &kp F7 &kp F8
+            &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR          &kp PAUSE_BREAK &kp F9 &kp F10 &kp F11 &kp F12
+            ___ ___ ___                                                             ___ ___ ___  
+            >;
+        };
 
-		function_layer {
-			label = "Function";
-			bindings = <
-			&kp C_AL_CALC &kp C_BRI_DN &kp C_BRI_UP &to LYDWARF &to LYQWERTY	&kp PRINTSCREEN &kp F1 &kp F2 &kp F3 &kp F4
-			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL &out OUT_TOG					&kp SCROLLLOCK &kp F5 &kp F6 &kp F7 &kp F8
-			&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3	&bt BT_CLR		&kp PAUSE_BREAK &kp F9 &kp F10 &kp F11 &kp F12
-			___ ___ ___															&kp SPACE &kp TAB &kp K_APP  
-			>;
-		};
-
-		reporting_layer {
-			label = "Reporting";
-			bindings = <
-			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5						___ ___ ___ ___ ___
-			&kp ESC &kp TAB &kp DELETE &dictation_macro ___			___ ___ ___ ___ ___
-			&kp N6 &kp N7 &kp N8 &kp N9 &kp N0						___ ___ ___ ___ ___
-			___ ___ ___ 											___ ___ ___
-			>;
-		};
-	};
+        reporting_layer {
+            label = "Reporting";
+            bindings = <
+            &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                        ___ ___ ___ ___ ___
+            &kp ESC &kp TAB &kp DELETE &dictation_macro ___            ___ ___ ___ ___ ___
+            &kp N6 &kp N7 &kp N8 &kp N9 &kp N0                        ___ ___ ___ ___ ___
+            ___ ___ ___                                             ___ ___ ___
+            >;
+        };
+    };
 };
