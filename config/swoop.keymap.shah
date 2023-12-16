@@ -155,7 +155,7 @@
             &kp F &kp L &kp H &kp D &kp V                                   &kp Z &kp G  &kp O &kp U &kp DOT 
             &hml LGUI S &hml LALT R &hml LSHIFT N &hml LCTRL T &kp M        &kp P &hmr RCTRL Y &hmr RSHIFT E &hmr RALT I &hmr RGUI A
             &kp X &kp J &kp B &kp K &kp Q                                   &kp C &kp W &kp SQT &kp COMMA &kp SEMICOLON
-            ___ &tlt LYFN TAB &tlt LYNUM BACKSPACE                          &tlt LYNAV SPACE &ltl LYSYM ENTER ___
+            ___ &tlt LYFN TAB &tlt LYNUM BACKSPACE                          &tlt LYNAV SPACE &tlt LYSYM ENTER ___
             >;
         };
 
