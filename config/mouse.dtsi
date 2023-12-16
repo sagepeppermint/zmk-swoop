@@ -8,7 +8,7 @@
 
 &mwh {
   acceleration-exponent = <1>;      // 0
-  time-to-max-speed-ms = <5000>;    // 40
+  time-to-max-speed-ms = <2000>;    // 40
   delay-ms = <0>;                   // 10
 };
 
@@ -44,4 +44,3 @@
 #define U_WH_D &mwh SCROLL_DOWN
 #define U_WH_L &mwh SCROLL_LEFT
 #define U_WH_R &mwh SCROLL_RIGHT
-
