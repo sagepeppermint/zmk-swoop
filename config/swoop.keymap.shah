@@ -100,11 +100,11 @@
             compatible = "zmk,behavior-caps-word";
             label = "CAPITAL_WORD";
             #binding-cells = <0>;
-                        mods = <MOD_LSFT>;
+            mods = <MOD_LSFT>;
             continue-list = <UNDERSCORE BACKSPACE DELETE FSLH>;
-                        ignore-alphas;
-                        ignore-numbers;
-                        ignore-modifiers;
+            ignore-alphas;
+            ignore-numbers;
+            ignore-modifiers;
         };
     };
 
