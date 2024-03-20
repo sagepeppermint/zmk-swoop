@@ -286,7 +286,7 @@
 		compatible = "zmk,keymap";
 
 		default_layer {
-			label = "DWARF";
+			// DWARF
 			bindings = <
 			&kp F &kp L &kp H &kp D &kp V										&kp Z &kp G &kp O &kp U &kp DOT
 			&hml LGUI S &hml LALT R &hml LSHIFT N &hml LCTRL T &kp M        	&kp P &hmr RCTRL Y &hmr RSHIFT E &hmr RALT I &hmr RGUI A
@@ -296,7 +296,7 @@
 		};
 
 		qwerty_layer {
-			label = "QWERTY";
+			// QWERTY
 			bindings = <
 			&kp Q &kp W &kp E &kp R &kp T										&kp Y &kp U  &kp I &kp O &kp P
 			&hml LGUI A &hml LALT S &hml LSHIFT D &hml LCTRL F &kp G			&kp H &hmr RCTRL J &hmr RSHIFT K &hmr RALT L &hmr RGUI SEMICOLON
@@ -306,7 +306,7 @@
 		};
 
 		navigation_layer {
-			label = "Left Navigation";
+			// Left Navigation
 			bindings = <
 			&kp ESC &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &kp C_MUTE		XXX &kp PG_DN &kp UP &kp PG_UP &kp HOME 
 			&sk LGUI &sk LALT &sk LSHIFT &sk LCTRL &kp CAPS						XXX &kp LEFT &kp DOWN &kp RIGHT &kp END  
@@ -316,7 +316,7 @@
 		};
 
 		function_layer {
-			label = "Left Function";
+			// Left Function
 			bindings = <
 			___ ___ ___ ___ ___													&kp PRINTSCREEN &kp F1 &kp F2 &kp F3 &kp F4
 			&sk LGUI &sk LALT &sk LSHIFT &sk LCTRL ___							&kp SCROLLLOCK &kp F5 &kp F6 &kp F7 &kp F8
@@ -326,7 +326,7 @@
 		};
 
 		number_layer {
-			label = "Right Number";
+			// Right Number
 			bindings = <
 			&kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT								___ ___ ___ ___ ___
 			&kp FSLH &kp N4 &kp N5 &kp N6 &kp BSLH								___ &sk RCTRL &sk RSHIFT &sk RALT &sk RGUI
@@ -336,7 +336,7 @@
 		};
 
 		symbol_layer {
-			label = "Right Symbol";
+			// Right Symbol
 			bindings = <
 			&kp LBRC &kp AMPERSAND &kp STAR &kp LPAR &kp RBRC					___ ___ ___ ___ ___
 			&kp QUESTION &kp DOLLAR &kp PERCENT &kp CARET &kp PIPE				___ &sk RCTRL &sk RSHIFT &sk RALT &sk RGUI
@@ -346,7 +346,7 @@
 		};
 
 		number_right_layer {
-			label = "Number on Right";
+			// Number on Right
 			bindings = <
 			___ ___ ___ ___ ___													&kp COMMA &kp N7 &kp N8 &kp N9 &kp BSLH
 			___ ___ ___ ___ ___													&kp BACKSPACE &kp N4 &kp N5 &kp N6 &kp MINUS
@@ -356,7 +356,7 @@
 		};
 
 		mouse_layer {
-			label = "Mouse";
+			// Mouse
 			bindings = <
 			&tog LYMOUSE &tog LYMOUSE &tog LYMOUSE &tog LYMOUSE &tog LYMOUSE	&tog LYMOUSE &tog LYMOUSE &tog LYMOUSE &tog LYMOUSE &tog LYMOUSE
 			U_MS_L U_MS_U U_MS_D U_MS_R XXX										XXX U_MS_L U_MS_D U_MS_U U_MS_R
@@ -366,7 +366,7 @@
 		};
 
 		shortcut_layer {
-			label = "Shortcut";
+			// Shortcut
 			bindings = <
 			XXX XXX XXX XXX &kp C_BRI_UP										&kp C_BRI_UP XXX XXX XXX XXX
 			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL &kp C_BRI_DN					&kp C_BRI_DN &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
@@ -376,7 +376,7 @@
 		};
 
 		config_layer {
-			label = "Config";
+			// Config
 			bindings = <
 			___ ___ ___ ___ ___			XXX &kp C_BRI_DN &kp C_BRI_UP &to LYDWARF &to LYQWERTY
 			___ ___ ___ ___ ___			&out OUT_TOG &ctrltab &kp RSHIFT &alttab &guitab
