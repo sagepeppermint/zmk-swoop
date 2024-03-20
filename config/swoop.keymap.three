@@ -371,7 +371,7 @@
 			XXX XXX XXX XXX &kp C_BRI_UP										&kp C_BRI_UP XXX XXX XXX XXX
 			&kp LGUI &kp LALT &kp LSHIFT &kp LCTRL &kp C_BRI_DN					&kp C_BRI_DN &kp RCTRL &kp RSHIFT &kp RALT &kp RGUI
 			&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)	XXX							XXX &kp LC(V) &kp LC(C) &kp LC(X) &kp LC(Z)
-			U_BTN3 U_BTN2 U_BTN1												U_BTN1 U_BTN2 U_BTN3
+			&mkp MCLK &mkp RCLK &mkp LCLK										&mkp LCLK &mkp RCLK &mkp MCLK
 			>;
 		};
 
