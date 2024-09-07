@@ -290,7 +290,7 @@
 			bindings = <
 			&kp F &kp L &kp H &kp D &kp V										&kp Z &kp G &kp O &kp U &kp DOT
 			&hml LGUI S &hml LALT R &hml LSHIFT N &hml LCTRL T &kp M        	&kp P &hmr RCTRL Y &hmr RSHIFT E &hmr RALT I &hmr RGUI A
-			&bsl LSHIFT X &kp J &kp B &hll LYSCT K &kp Q           				&kp C &hlr LYSCT W &kp SQT &kp COMMA &bsr RSHIFT SEMICOLON
+			&bsl LSHIFT X &kp J &kp B &hll LYSCT K &kp Q						&kp C &hlr LYSCT W &kp SQT &kp COMMA &bsr RSHIFT SEMICOLON
 			&tlt LYCONFIG DELETE &tlt LYFUN ENTER &tlt LYLNAV BACKSPACE  		&tspacemorph LYLNUM XXX &tlt LYLSYM TAB &kp ESC
 			>;
 		};
