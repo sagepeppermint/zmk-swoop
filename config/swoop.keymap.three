@@ -37,7 +37,6 @@
 
 		hml: homerow-mod-left {
 			compatible = "zmk,behavior-hold-tap";
-			label = "HOMEROW_MOD_LEFT";
 			#binding-cells = <2>;
 			flavor = "balanced";
 			tapping-term-ms = <300>;
