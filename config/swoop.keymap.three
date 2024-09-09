@@ -49,7 +49,6 @@
 
 		hmr: homerow-mod-right {
 			compatible = "zmk,behavior-hold-tap";
-			label = "HOMEROW_MOD_RIGHT";
 			#binding-cells = <2>;
 			flavor = "balanced";
 			tapping-term-ms = <300>;
@@ -62,7 +61,6 @@
 
 		hll: homerow-layer-left {
 			compatible = "zmk,behavior-hold-tap";
-			label = "HOMEROW_LAYER_LEFT";
 			#binding-cells = <2>;
 			flavor = "balanced";
 			tapping-term-ms = <300>;
@@ -74,7 +72,6 @@
 
 		hlr: homerow-layer-right {
 			compatible = "zmk,behavior-hold-tap";
-			label = "HOMEROW_LAYER_RIGHT";
 			#binding-cells = <2>;
 			flavor = "balanced";
 			tapping-term-ms = <300>;
@@ -86,7 +83,6 @@
 
 		tlt: thumb-layer-tap {
 			compatible = "zmk,behavior-hold-tap";
-			label = "THUMB_LAYER_TAP";
 			#binding-cells = <2>;
 			flavor = "balanced";
 			tapping-term-ms = <175>;
@@ -97,7 +93,6 @@
 
 		bsl: bottom-shift-left {
 			compatible = "zmk,behavior-hold-tap";
-			label = "BOTTOM_SHIFT_LEFT";
 			#binding-cells = <2>;
 			flavor = "balanced";
 			tapping-term-ms = <300>;
@@ -109,7 +104,6 @@
 
 		bsr: bottom-shift-right {
 			compatible = "zmk,behavior-hold-tap";
-			label = "BOTTOM_SHIFT_RIGHT";
 			#binding-cells = <2>;
 			flavor = "balanced";
 			tapping-term-ms = <300>;
@@ -121,7 +115,6 @@
 
 		alttab: swapper-alt-tab {
 			compatible = "zmk,behavior-tri-state";
-			label = "SWAPPER_ALT_TAB";
 			#binding-cells = <0>;
 			bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
 			ignored-key-positions = <17>;
@@ -129,7 +122,6 @@
 
 		ctrltab: swapper-ctrl-tab {
 			compatible = "zmk,behavior-tri-state";
-			label = "SWAPPER_CTRL_TAB";
 			#binding-cells = <0>;
 			bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
 			ignored-key-positions = <17>;
@@ -137,7 +129,6 @@
 
 		guitab: swapper-gui-tab {
 			compatible = "zmk,behavior-tri-state";
-			label = "SWAPPER_GUI_TAB";
 			#binding-cells = <0>;
 			bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
 			ignored-key-positions = <17>;
@@ -145,7 +136,6 @@
 
 		numberword: number-word {
 			compatible = "zmk,behavior-caps-word";
-			label = "NUMBER_WORD";
 			#binding-cells = <0>;
 			layers = <LYRNUM>;
 			continue-list = <BACKSPACE MINUS DOT COMMA FSLH BSLH>;
@@ -155,7 +145,6 @@
 
 		capitalword: capital-word {
 			compatible = "zmk,behavior-caps-word";
-			label = "CAPITAL_WORD";
 			#binding-cells = <0>;
 			mods = <MOD_LSFT>;
 			continue-list = <UNDERSCORE BACKSPACE DELETE FSLH>;
@@ -166,7 +155,6 @@
 
 		spacemorph: space-morph {
 			compatible = "zmk,behavior-mod-morph";
-			label = "SPACE_MORPH";
 			#binding-cells = <0>;
 			bindings = <&kp SPACE>, <&macro_spcdot>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -174,7 +162,6 @@
 
 		tspacemorph: thumb-space-morph {
 			compatible = "zmk,behavior-hold-tap";
-			label = "THUMB_SPACE_MORPH";
 			#binding-cells = <2>;
 			flavor = "balanced";
 			tapping-term-ms = <175>;
@@ -260,7 +247,6 @@
 	macros {
 
 		macro_spcdot: macro_spcdot {
-			label = "SPACE_DOT";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings = <&macro_tap &kp DOT &kp SPACE &sk LSHFT>;
