@@ -325,7 +325,7 @@
 			bindings = <
 			&kp LBRC &kp AMPERSAND &kp STAR &kp LPAR &kp RBRC					___ ___ ___ ___ ___
 			&kp QUESTION &kp DOLLAR &kp PERCENT &kp CARET &kp PIPE				___ &sk RCTRL &sk RSHIFT &sk RALT &sk RGUI
-			&kp TILDE &kp EXCL &kp AT &kp HASH &kp PLUS							&kp INSERT &kp BACKSPACE&kp DEL &kp TAB &kp ENTER
+			&kp TILDE &kp EXCL &kp AT &kp HASH &kp PLUS							&kp INSERT &kp BACKSPACE &kp DEL &kp TAB &kp ENTER
 			&kp LPAR &kp UNDERSCORE &kp RPAR 									___ ___ ___
 			>;
 		};
