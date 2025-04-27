@@ -4,7 +4,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "mouse.dtsi"
 
-// Layer definitions
+// Layer definitions   
 #define LYDWARF 0
 #define LYQWERTY 1
 #define LYLNAV 2
